@@ -1,0 +1,14 @@
+{
+	"source": "./src",
+	"destination": "./docs",
+	"excludes": [
+		"utils/creators/createRequestActions.js"
+	],
+	"plugins": [
+		{ "name": "esdoc-standard-plugin" },
+		{ "name": "esdoc-ecmascript-proposal-plugin", "option": { "all": true }},
+		{ "name": "esdoc-react-plugin" },
+		{ "name": "esdoc-jsx-plugin" },
+		{ "name": "esdoc-flow-type-plugin" }
+ 	]
+}

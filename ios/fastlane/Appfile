@@ -1,0 +1,13 @@
+for_platform :ios do
+  for_lane :beta do
+		app_identifier 'com.ownyourdata'
+		team_id 'T8EEZU6TZG'
+		apple_id 'dev@animal.at'
+  end
+
+  for_lane :testFlight do
+	app_identifier 'com.ownyourdata'
+	team_id 'T8EEZU6TZG'
+	apple_id 'dev@animal.at'
+  end
+end
