@@ -1,6 +1,6 @@
 {
 	"name": "ownyourdata",
-	"version": "0.0.19(1)",
+	"version": "0.4.5",
 	"private": true,
 	"scripts": {
 		"ra": "adb shell am broadcast -a react.native.RELOAD",
@@ -75,7 +75,7 @@
 		"react-native-restart": "^0.0.6",
 		"react-native-sentry": "^0.35.3",
 		"react-native-sha256": "^1.1.1",
-		"react-native-spinkit": "^1.1.1",
+		"react-native-spinkit": "1.2.0",
 		"react-native-svg": "^6.0.1-rc.1",
 		"react-native-svg-uri": "^1.2.3",
 		"react-native-vector-icons": "^4.5.0",

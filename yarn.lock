@@ -8710,10 +8710,10 @@ react-native-sha256@^1.1.1:
   resolved "https://registry.yarnpkg.com/react-native-sha256/-/react-native-sha256-1.1.1.tgz#3598dba556b0bbcd12618bd101c10d130c217fc3"
   integrity sha512-Tj2HP++0RfyUW36a+k61YUr4cdOxvOQVvEtkVoC0G7VAVLaXiVHYpEb7TL3ObgViWw5jxRj+EeMzB7xIbhOleA==
 
-react-native-spinkit@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/react-native-spinkit/-/react-native-spinkit-1.1.1.tgz#3ae512f3978bc750b7c02639911e1710750d8539"
-  integrity sha1-OuUS85eLx1C3wCY5kR4XEHUNhTk=
+react-native-spinkit@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-spinkit/-/react-native-spinkit-1.2.0.tgz#bc3eb2cf44f0233928721b53f3eb1d6bfb1322e4"
+  integrity sha512-q+o0LcoF6x0cr9rByA9QUaykTra5jwkuQnwzS1thaHF1aNSQ0LD4DuIu/qkvaO+zXtz5U9MPszghjVTcqn2ENA==
   dependencies:
     prop-types "^15.5.8"
 

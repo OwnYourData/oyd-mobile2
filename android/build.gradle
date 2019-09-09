@@ -31,4 +31,22 @@ allprojects {
 			url "$rootDir/../node_modules/react-native-background-fetch/android/libs"
 		}
     }
+    subprojects {
+        project.configurations.all {
+            resolutionStrategy.eachDependency { details ->
+                if (details.requested.group == 'com.android.support'
+                        && !details.requested.name.contains('multidex') ) {
+                    details.useVersion "26.+"
+                }
+                if (details.requested.group == 'com.google.android.gms'
+                && !details.requested.name.contains('multidex') && !details.requested.name.contains('play-services-stats')) {
+                    details.useVersion "12.+"
+                }
+                if (details.requested.group == 'com.google.android.gms'
+                && !details.requested.name.contains('multidex') && details.requested.name.contains('play-services-stats')) {
+                    details.useVersion "+"
+                }
+            }
+        }
+    }
 }
