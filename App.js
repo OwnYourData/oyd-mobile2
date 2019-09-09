@@ -1,9 +1,9 @@
 import React from 'react';
 import { Platform, AppRegistry } from 'react-native';
 import { Navigation, NativeEventsReceiver } from 'react-native-navigation';
-import { captureSentryMessage } from './utils/captureSentryMessage';
-import { nav, registerModules } from './config/index';
-import { initBackgroundTask, backgroundTask } from './utils';
+import { captureSentryMessage } from './src/utils/captureSentryMessage';
+import { nav, registerModules } from './src/config/index';
+import { initBackgroundTask, backgroundTask } from './src/utils';
 
 /**
  * ## Configure the store and init the roots
@@ -35,7 +35,8 @@ type Nav = {
  * App launches and registers a single screen application
  * calling initialView first.
  */
-class App extends React.Component<{}> {
+type Props = {};
+class App extends React.Component<Props> {
 	static start = ({ key = 'CORE', animationType, passProps }:Nav) => nav.startSingleScreenApp(key, animationType, passProps);
 
 	constructor(props:mixed) {
