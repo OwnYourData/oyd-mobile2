@@ -2,7 +2,7 @@ apply plugin: "com.android.application"
 
 import com.android.build.OutputFile
 apply plugin: 'io.fabric'
-apply from: "../../node_modules/react-native-sentry/sentry.gradle"
+// apply from: "../../node_modules/react-native-sentry/sentry.gradle"
 repositories {
     maven { url 'https://maven.fabric.io/public' }
 }
