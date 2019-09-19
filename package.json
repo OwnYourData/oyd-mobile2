@@ -76,7 +76,7 @@
 		"react-native-sentry": "^0.35.3",
 		"react-native-sha256": "^1.1.1",
 		"react-native-spinkit": "1.2.0",
-		"react-native-svg": "^6.0.1-rc.1",
+		"react-native-svg": "^9.9.4",
 		"react-native-svg-uri": "^1.2.3",
 		"react-native-vector-icons": "^4.5.0",
 		"react-redux": "^5.0.6",
@@ -85,7 +85,7 @@
 		"redux-persist-filesystem-storage": "^1.2.0",
 		"redux-persist-transform-immutable": "^4.3.0",
 		"redux-saga": "^0.16.0",
-		"styled-components": "^2.4.0",
+		"styled-components": "^4.0.0",
 		"uglify-es": "3.2.2",
 		"yarn": "^1.5.1"
 	},
