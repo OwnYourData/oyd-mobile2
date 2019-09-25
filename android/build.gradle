@@ -25,7 +25,9 @@ buildscript {
 allprojects {
     repositories {
 		google()
-        maven { url "https://jitpack.io" }
+        // Keeps throwing errors because bouncycastle can not be fetched from this site
+        // But obivously, this site isn't needed for correctly building the apk, so what...
+        // maven { url "https://jitpack.io" }
         mavenLocal()
         jcenter()
 		maven {
@@ -43,7 +45,7 @@ allprojects {
             resolutionStrategy.eachDependency { details ->
                 if (details.requested.group == 'com.android.support'
                         && !details.requested.name.contains('multidex') ) {
-                    details.useVersion "26.+"
+                    details.useVersion "28.+"
                 }
                 if (details.requested.group == 'com.google.android.gms'
                 && !details.requested.name.contains('multidex') && !details.requested.name.contains('play-services-stats')) {
@@ -52,6 +54,16 @@ allprojects {
                 if (details.requested.group == 'com.google.android.gms'
                 && !details.requested.name.contains('multidex') && details.requested.name.contains('play-services-stats')) {
                     details.useVersion "+"
+                }
+            }
+        }
+    }
+    subprojects { subproject ->
+        afterEvaluate{
+            if((subproject.plugins.hasPlugin('android') || subproject.plugins.hasPlugin('android-library'))) {
+                android {
+                    compileSdkVersion rootProject.ext.compileSdkVersion
+                    buildToolsVersion rootProject.ext.buildToolsVersion
                 }
             }
         }
