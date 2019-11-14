@@ -61,8 +61,9 @@ export default class {
 				this.callAgain(params, type, bodyObj);
 				this.count++;
 			}
-			const { _bodyText, status } = response;
-			return { response: { data: _bodyText, respInfo: { status } } };
+			const { status } = response;
+			const data = await response.text();
+			return { response: { data, respInfo: { status } } };
 		} catch (error) {
 			await captureSentryMessage({
 				message: 'request',
