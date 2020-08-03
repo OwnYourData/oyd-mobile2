@@ -1,7 +1,7 @@
 export default {
 	core: {
 		version: 'App Version: ',
-		footer: '© 2015-2018 ',
+		footer: '© 2015-%{current} ',
 		footerLink: 'OwnYourData.eu'
 	}
 };

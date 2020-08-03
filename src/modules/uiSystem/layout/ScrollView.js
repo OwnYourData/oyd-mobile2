@@ -23,7 +23,7 @@ class ScrollView extends React.PureComponent<Props> {
 			{!this.props.hideFooter && <Footer
 				link={() => linkTo(`https://OwnYourData.eu/${getUsedLocale()}`)}
 				version={this.props.showVersion ? `${this.props.i18n.t('core.version')}${version}` : ''}
-				text={this.props.i18n.t('core.footer')}
+				text={this.props.i18n.t('core.footer', { current: new Date().getFullYear() })}
 				linkText={this.props.i18n.t('core.footerLink')}
 			/>}
 		</KeyboardAwareScrollView>
