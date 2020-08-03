@@ -10,7 +10,6 @@ import com.facebook.react.bridge.JavaScriptExecutorFactory;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.support.multidex.MultiDex;
 
 import com.facebook.soloader.SoLoader;
 import com.facebook.react.ReactPackage;
