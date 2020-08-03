@@ -22,7 +22,12 @@ export default function* ({ actions }:mixed, action:mixed) {
 			});
 			yield put(actions.onSetOauthToken({ error: true }));
 		}
-		if (status !== 200 || error) return yield put(actions.onRegisterError({ registerErrorMessage: dataObj.message }));
+		if (status !== 200 || error) {
+			return yield put(actions.onRegisterError({
+				// TODO: Define, which properties are provided by server in case of errors
+				registerErrorMessage: dataObj.message || dataObj.error,
+			}));
+		}
 
 		yield put(actions.onRegisterSuccess({ registerSuccess: true }));
 
