@@ -1,5 +1,12 @@
 package com.ownyourdata;
 
+import android.app.Application;
+import android.util.Log;
+
+import com.facebook.react.PackageList;
+import com.facebook.hermes.reactexecutor.HermesExecutorFactory;
+import com.facebook.react.bridge.JavaScriptExecutorFactory;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -29,10 +36,9 @@ import io.fabric.sdk.android.Fabric;
 
 import com.github.yamill.orientation.OrientationPackage;
 
-import java.util.Arrays;
 import java.util.List;
 
-public class MainApplication extends NavigationApplication {
+public class MainApplication extends NavigationApplication implements ReactApplication {
 
     @Override
     public void onCreate() {
@@ -53,24 +59,30 @@ public class MainApplication extends NavigationApplication {
     }
 
     protected List<ReactPackage> getPackages() {
-        return Arrays.<ReactPackage>asList(
-                new RNGeocoderPackage(),
-                new FusedLocationPackage(),
-                new RCTCameraPackage(),
-                new ReactNativeRestartPackage(),
-                new ReactNativeExceptionHandlerPackage(),
-                new SvgPackage(),
-                new RNSpinkitPackage(),
-                new VectorIconsPackage(),
-                new RNFetchBlobPackage(),
-                new RNBackgroundFetchPackage(),
-                new RNI18nPackage(),
-                new SodiumPackage(),
-                new Sha256Package(),
-                new WifiCheckPackage(),
-                new OrientationPackage(),
-                new RNAndroidLocationEnablerPackage()
-        );
+        @SuppressWarnings("UnnecessaryLocalVariable")
+        List<ReactPackage> packages = new PackageList(this).getPackages();
+        // Packages that cannot be autolinked yet can be added manually here, for example:
+        // packages.add(new MyReactNativePackage());
+        return packages;
+        
+        // return Arrays.<ReactPackage>asList(
+        //         new RNGeocoderPackage(),
+        //         new FusedLocationPackage(),
+        //         new RCTCameraPackage(),
+        //         new ReactNativeRestartPackage(),
+        //         new ReactNativeExceptionHandlerPackage(),
+        //         new SvgPackage(),
+        //         new RNSpinkitPackage(),
+        //         new VectorIconsPackage(),
+        //         new RNFetchBlobPackage(),
+        //         new RNBackgroundFetchPackage(),
+        //         new RNI18nPackage(),
+        //         new SodiumPackage(),
+        //         new Sha256Package(),
+        //         new WifiCheckPackage(),
+        //         new OrientationPackage(),
+        //         new RNAndroidLocationEnablerPackage()
+        // );
     }
 
     @Override

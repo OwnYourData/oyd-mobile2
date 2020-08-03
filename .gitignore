@@ -60,3 +60,6 @@ executionHistory.bin
 
 # visual studio code
 .vscode/.react/*
+
+# CocoaPods
+/ios/Pods/

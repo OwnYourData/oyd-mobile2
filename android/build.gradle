@@ -15,7 +15,7 @@ buildscript {
         maven { url 'https://maven.fabric.io/public' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.0'
+        classpath 'com.android.tools.build:gradle:3.4.1'
         classpath 'io.fabric.tools:gradle:1.+'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -24,21 +24,17 @@ buildscript {
 
 allprojects {
     repositories {
-		google()
-        // Keeps throwing errors because bouncycastle can not be fetched from this site
-        // But obivously, this site isn't needed for correctly building the apk, so what...
-        // maven { url "https://jitpack.io" }
         mavenLocal()
+        maven {
+            // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+            url("$rootDir/../node_modules/react-native/android")
+        }
+        maven {
+            // Android JSC is installed from npm
+            url("$rootDir/../node_modules/jsc-android/dist")
+        }
+        google()
         jcenter()
-		maven {
-			url "$rootDir/../node_modules/react-native/android"
-		}
-		maven {
-			url 'https://maven.google.com'
-		}
-		maven {
-			url "$rootDir/../node_modules/react-native-background-fetch/android/libs"
-		}
     }
     subprojects {
         project.configurations.all {
