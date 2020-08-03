@@ -12,7 +12,6 @@ target 'ownyourdata' do
 
   pod 'RNBackgroundGeolocation', :path => '../node_modules/react-native-background-geolocation'
 
-  pod 'react-native-orientation', :path => '../node_modules/react-native-orientation'
 
   pod 'react-native-orientation-locker', :path => '../node_modules/react-native-orientation-locker'
 

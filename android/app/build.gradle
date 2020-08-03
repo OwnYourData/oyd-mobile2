@@ -76,12 +76,6 @@ android {
         multiDexEnabled = true
     }
     signingConfigs {
-        debug {
-            storeFile file('debug.keystore')
-            storePassword 'android'
-            keyAlias 'androiddebugkey'
-            keyPassword 'android'
-        }
         release {
             storeFile file(MYAPP_RELEASE_STORE_FILE)
             storePassword MYAPP_RELEASE_STORE_PASSWORD
@@ -135,29 +129,9 @@ android {
 }
 
 dependencies {
-    compile project(':react-native-orientation')
-    compile project(':react-native-sentry')
-    compile project(':react-native-camera')
-    compile project(':react-native-background-fetch')
-    compile (project(':react-native-camera')) {
-        exclude group: "com.google.android.gms"
-    }
     compile ("com.google.android.gms:play-services-vision:11.8.0") {
         force = true;
     }
-    compile project(':react-native-android-location-enabler')
-    compile project(':react-native-sha256')
-    compile project(':react-native-libsodium')
-    compile project(':react-native-geocoder')
-    compile project(':react-native-fused-location')
-    compile project(':react-native-restart')
-    compile project(':react-native-exception-handler')
-    compile project(':react-native-svg')
-    compile project(':react-native-spinkit')
-    compile project(':react-native-vector-icons')
-    compile project(':react-native-fetch-blob')
-    compile project(':react-native-navigation')
-    compile project(':react-native-i18n')
     compile 'com.android.support:multidex:1.0.3'
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules

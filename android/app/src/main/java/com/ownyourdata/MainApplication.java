@@ -12,29 +12,14 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.support.multidex.MultiDex;
 
-import com.avishayil.rnrestart.ReactNativeRestartPackage;
 import com.facebook.soloader.SoLoader;
-import com.masteratul.exceptionhandler.ReactNativeExceptionHandlerPackage;
-import com.AlexanderZaytsev.RNI18n.RNI18nPackage;
 import com.facebook.react.ReactPackage;
 import com.reactnativenavigation.NavigationApplication;
-import com.devfd.RNGeocoder.RNGeocoderPackage;
-import com.mustansirzia.fused.FusedLocationPackage;
-import com.lwansbrough.RCTCamera.RCTCameraPackage;
-import com.horcrux.svg.SvgPackage;
-import com.react.rnspinkit.RNSpinkitPackage;
-import com.oblador.vectoricons.VectorIconsPackage;
-import com.RNFetchBlob.RNFetchBlobPackage;
 import com.reactnativenavigation.controllers.ActivityCallbacks;
-import com.sodium.SodiumPackage;
-import com.sha256lib.Sha256Package;
-import com.heanoria.library.reactnative.locationenabler.RNAndroidLocationEnablerPackage;
 import com.crashlytics.android.Crashlytics;
-import com.transistorsoft.rnbackgroundfetch.RNBackgroundFetchPackage;
 
 import io.fabric.sdk.android.Fabric;
 
-import com.github.yamill.orientation.OrientationPackage;
 
 import java.util.List;
 
