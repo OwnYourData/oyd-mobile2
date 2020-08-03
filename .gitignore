@@ -57,3 +57,6 @@ buck-out/
 
 # large gradle artefact
 executionHistory.bin
+
+# visual studio code
+.vscode/.react/*
