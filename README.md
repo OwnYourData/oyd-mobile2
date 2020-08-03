@@ -58,10 +58,14 @@ A few of the things you can do with the OwnYourData app:
 
 - Follow the [React Native Guide](https://facebook.github.io/react-native/docs/getting-started.html) for getting started building a project with native code. **A Mac is required if you wish to develop for iOS.**
 - Clone or download the repository from GitHub.
-- Run `yarn` to install the dependencies.
+- Run `yarn` to install the dependencies\*.
 - Run `yarn start` to start the packager.
 - In another terminal, run `yarn run android` or `yarn run ios` to start the app on a device attached to your PC.
 - Activate `Remote JS Debugging` via the [In-App Developer Menu](https://facebook.github.io/react-native/docs/debugging.html) to get more insights via [React Native Debugger](https://github.com/jhen0409/react-native-debugger).
+
+\* if there are problems while installing packages, use the following command instead: `yarn --ignore-engines install`
+
+This will ensure, yarn does not check for node version
 
 ## Deploy to test flight
 
