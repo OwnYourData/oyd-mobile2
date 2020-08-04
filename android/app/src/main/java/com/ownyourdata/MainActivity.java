@@ -1,8 +1,8 @@
 package com.ownyourdata;
 
-import android.view.View;
-import android.content.Intent;
-import android.content.res.Configuration;
+import com.facebook.react.ReactActivity;
+
+// custom imports
 
 import com.reactnativenavigation.NavigationActivity;
 
