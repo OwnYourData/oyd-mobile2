@@ -2,8 +2,6 @@ import React from 'react';
 import { Alert, NetInfo } from 'react-native';
 import { replace } from 'lodash';
 
-import { withNetworkConnectivity } from 'react-native-offline';
-
 import { getLocationData, setLocationData, setIdentifier } from '../../utils/asyncStore';
 import { getLocation, linkTo, initEncryptedData, getUsedLocale } from '../../utils/index';
 import { onRefreshToken } from '../../utils/backgroundLocation';
@@ -369,4 +367,4 @@ class Settings extends UI.PureComponent<Props> {
 	};
 }
 
-export default withNetworkConnectivity()(Settings);
+export default Settings;

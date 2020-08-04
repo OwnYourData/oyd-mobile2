@@ -73,4 +73,4 @@ class Dashboard extends Location {
 		</UI.Module>);
 }
 
-export default withNetworkConnectivity()(Dashboard);
+export default Dashboard;
