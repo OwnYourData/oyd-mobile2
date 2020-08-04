@@ -8020,11 +8020,11 @@ lodash@4.17.x, lodash@^4.17.10, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.1
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
   integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
 
-lodash@^3.10.1, lodash@^3.8.0:
+lodash@^3.10.1:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
-lodash@^4.0.0, lodash@^4.1.0, lodash@^4.11.1, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0:
+lodash@^4.0.0, lodash@^4.1.0, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0:
   version "4.17.5"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
 
@@ -10301,12 +10301,6 @@ react-native-debugger-open@^0.3.22:
     minimist "^1.2.0"
     semver "^5.4.1"
 
-react-native-easy-grid@^0.1.16:
-  version "0.1.17"
-  resolved "https://registry.yarnpkg.com/react-native-easy-grid/-/react-native-easy-grid-0.1.17.tgz#fad8cb371d465828c1c71daa4d8b513d33253452"
-  dependencies:
-    lodash "^4.11.1"
-
 react-native-easy-toast@^1.0.9:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/react-native-easy-toast/-/react-native-easy-toast-1.1.0.tgz#7d3a34ed298d32c4827b8d43ddfab6a71b98a2e3"
@@ -10326,18 +10320,12 @@ react-native-exception-handler@^2.7.0:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/react-native-exception-handler/-/react-native-exception-handler-2.7.1.tgz#96eb20493050f4bccc88b9e3270afc40580f8dba"
 
-react-native-fetch-blob@^0.10.0, react-native-fetch-blob@^0.10.8:
+react-native-fetch-blob@^0.10.0:
   version "0.10.8"
   resolved "https://registry.yarnpkg.com/react-native-fetch-blob/-/react-native-fetch-blob-0.10.8.tgz#4fc256abae0cb5f10e7c41f28c11b3ff330d72a9"
   dependencies:
     base-64 "0.1.0"
     glob "7.0.6"
-
-react-native-floating-labels@^1.1.6:
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/react-native-floating-labels/-/react-native-floating-labels-1.1.6.tgz#55f79085ff09cccb4c15c9118eceb1dd0309cbee"
-  dependencies:
-    lodash "^3.8.0"
 
 react-native-fused-location@^0.0.11:
   version "0.0.11"
