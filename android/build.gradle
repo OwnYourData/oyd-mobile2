@@ -33,8 +33,10 @@ allprojects {
             // Android JSC is installed from npm
             url("$rootDir/../node_modules/jsc-android/dist")
         }
-        google()
-        jcenter()
+        maven {
+            // Required for react-native-background-geolocation
+            url("${project(':react-native-background-geolocation').projectDir}/libs")
+        }
     }
     subprojects {
         project.configurations.all {

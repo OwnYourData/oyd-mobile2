@@ -2945,10 +2945,12 @@ base-64@0.1.0:
 base64-js@1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.1.2.tgz#d6400cac1c4c660976d90d07a04351d89395f5e8"
+  integrity sha1-1kAMrBxMZgl22Q0HoENR2JOV9eg=
 
 base64-js@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.2.0.tgz#a39992d723584811982be5e290bb6a53d86700f1"
+  integrity sha1-o5mS1yNYSBGYK+XikLtqU9hnAPE=
 
 base64-js@^1.0.2, base64-js@^1.1.2, base64-js@^1.2.3:
   version "1.2.3"
@@ -2979,8 +2981,9 @@ bcrypt-pbkdf@^1.0.0:
     tweetnacl "^0.14.3"
 
 big-integer@^1.6.7:
-  version "1.6.27"
-  resolved "https://registry.yarnpkg.com/big-integer/-/big-integer-1.6.27.tgz#8e56c6f8b2dd6c4fe8d32102b83d4f25868e4b3a"
+  version "1.6.48"
+  resolved "https://registry.yarnpkg.com/big-integer/-/big-integer-1.6.48.tgz#8fd88bd1632cba4a1c8c3e3d7159f08bb95b4b9e"
+  integrity sha512-j51egjPa7/i+RdiRuJbPdJ2FIUYYPhvYLjzoYbcMMm62ooO6F94fETG4MTs46zPAF9Brs04OajboA/qTGuz78w==
 
 big.js@^3.1.3:
   version "3.2.0"
@@ -3048,12 +3051,14 @@ bowser@^1.0.0, bowser@^1.7.3:
 bplist-creator@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/bplist-creator/-/bplist-creator-0.0.7.tgz#37df1536092824b87c42f957b01344117372ae45"
+  integrity sha1-N98VNgkoJLh8QvlXsBNEEXNyrkU=
   dependencies:
     stream-buffers "~2.2.0"
 
 bplist-parser@0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/bplist-parser/-/bplist-parser-0.1.1.tgz#d60d5dcc20cba6dc7e1f299b35d3e1f95dafbae6"
+  integrity sha1-1g1dzCDLptx+HymbNdPh+V2vuuY=
   dependencies:
     big-integer "^1.6.7"
 
@@ -3558,10 +3563,6 @@ coa@~1.0.1:
   resolved "https://registry.yarnpkg.com/coa/-/coa-1.0.4.tgz#a9ef153660d6a86a8bdec0289a5c684d217432fd"
   dependencies:
     q "^1.1.2"
-
-cocoa-lumberjack@^3.0.5:
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/cocoa-lumberjack/-/cocoa-lumberjack-3.0.5.tgz#0b29683272ad426974a2c71c86d4de9a81029e6d"
 
 code-point-at@^1.0.0:
   version "1.1.0"
@@ -5169,6 +5170,7 @@ fast-memoize@^2.2.7:
 fast-plist@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/fast-plist/-/fast-plist-0.1.2.tgz#a45aff345196006d406ca6cdcd05f69051ef35b8"
+  integrity sha1-pFr/NFGWAG1AbKbNzQX2kFHvNbg=
 
 fastparse@^1.1.1:
   version "1.1.1"
@@ -8653,6 +8655,7 @@ pbkdf2@^3.0.3:
 pegjs@^0.10.0:
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/pegjs/-/pegjs-0.10.0.tgz#cf8bafae6eddff4b5a7efb185269eaaf4610ddbd"
+  integrity sha1-z4uvrm7d/0tafvsYUmnqr0YQ3b0=
 
 performance-now@^0.2.0:
   version "0.2.0"
@@ -8711,6 +8714,7 @@ pkg-dir@^3.0.0:
 plist@2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/plist/-/plist-2.0.1.tgz#0a32ca9481b1c364e92e18dc55c876de9d01da8b"
+  integrity sha1-CjLKlIGxw2TpLhjcVch23p0B2os=
   dependencies:
     base64-js "1.1.2"
     xmlbuilder "8.2.2"
@@ -8719,6 +8723,7 @@ plist@2.0.1:
 plist@^2.0.1:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/plist/-/plist-2.1.0.tgz#57ccdb7a0821df21831217a3cad54e3e146a1025"
+  integrity sha1-V8zbeggh3yGDEhejytVOPhRqECU=
   dependencies:
     base64-js "1.2.0"
     xmlbuilder "8.2.2"
@@ -9367,22 +9372,23 @@ react-native-background-fetch@^2.4.0:
     plist "^3.0.1"
     xcode "^2.0.0"
 
-react-native-background-fetch@~2.4.1:
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/react-native-background-fetch/-/react-native-background-fetch-2.4.2.tgz#1ef2b91f9e0b8606aeef28f6e8d6a61ce30b18ac"
+react-native-background-fetch@~3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-background-fetch/-/react-native-background-fetch-3.1.0.tgz#5ec182662e76bd8257f21c6f65cdcb73e87a0708"
+  integrity sha512-dnrfX3Od4r3aKuRSwDkpaPFXc3dYD5DbIW7CWC41M1CdEZEXNIWfZRvJPMVa72iflOzAh68ZTfZ3PgBK/NDtsQ==
   dependencies:
     fast-plist "^0.1.2"
-    plist "^2.0.1"
-    xcode "^0.9.1"
+    plist "^3.0.1"
+    xcode "^2.0.0"
 
-react-native-background-geolocation@^2.12.0-beta.4:
-  version "2.12.0-beta.4"
-  resolved "https://registry.yarnpkg.com/react-native-background-geolocation/-/react-native-background-geolocation-2.12.0-beta.4.tgz#297a665e42eb47a0b42ce2b31c0af6ffc67fd9ef"
+react-native-background-geolocation@^3:
+  version "3.8.1"
+  resolved "https://registry.yarnpkg.com/react-native-background-geolocation/-/react-native-background-geolocation-3.8.1.tgz#0137e76da5e3db0ba9c5f69014c0a1b8487cd7c3"
+  integrity sha512-IhBR6wj1g/PNHZ8yqWeFxxVBvmjYUJX+MhN3LpdMfJA/pBBm/Z5Q4DY7FFbzR5YD30qaIzOZqA+C/Yt0q22zmQ==
   dependencies:
-    cocoa-lumberjack "^3.0.5"
     fast-plist "^0.1.2"
     plist "^2.0.1"
-    react-native-background-fetch "~2.4.1"
+    react-native-background-fetch "~3.1.0"
     xcode "^0.9.1"
 
 react-native-camera@^0.12.0:
@@ -10480,6 +10486,7 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
 simple-plist@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/simple-plist/-/simple-plist-0.2.1.tgz#71766db352326928cf3a807242ba762322636723"
+  integrity sha1-cXZts1IyaSjPOoByQrp2IyJjZyM=
   dependencies:
     bplist-creator "0.0.7"
     bplist-parser "0.1.1"
@@ -10693,6 +10700,7 @@ stream-browserify@^2.0.1:
 stream-buffers@~2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/stream-buffers/-/stream-buffers-2.2.0.tgz#91d5f5130d1cef96dcfa7f726945188741d09ee4"
+  integrity sha1-kdX1Ew0c75bc+n9yaUUYh0HQnuQ=
 
 stream-each@^1.1.0:
   version "1.2.2"
@@ -11451,6 +11459,7 @@ utils-merge@1.0.1:
 uuid@3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.0.1.tgz#6544bba2dfda8c1cf17e629a3a305e2bb1fee6c1"
+  integrity sha1-ZUS7ot/ajBzxfmKaOjBeK7H+5sE=
 
 uuid@^3.0.0, uuid@^3.1.0:
   version "3.2.1"
@@ -11761,6 +11770,7 @@ xcode@2.0.0, xcode@^2.0.0:
 xcode@^0.9.1:
   version "0.9.3"
   resolved "https://registry.yarnpkg.com/xcode/-/xcode-0.9.3.tgz#910a89c16aee6cc0b42ca805a6d0b4cf87211cf3"
+  integrity sha1-kQqJwWrubMC0LKgFptC0z4chHPM=
   dependencies:
     pegjs "^0.10.0"
     simple-plist "^0.2.1"
@@ -11781,6 +11791,7 @@ xml-name-validator@^3.0.0:
 xmlbuilder@8.2.2:
   version "8.2.2"
   resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-8.2.2.tgz#69248673410b4ba42e1a6136551d2922335aa773"
+  integrity sha1-aSSGc0ELS6QuGmE2VR0pIjNap3M=
 
 xmlbuilder@^9.0.7:
   version "9.0.7"
@@ -11794,7 +11805,12 @@ xmldoc@^1.1.2:
   dependencies:
     sax "^1.2.1"
 
-xmldom@0.1.x, xmldom@^0.1.22:
+xmldom@0.1.x:
+  version "0.1.31"
+  resolved "https://registry.yarnpkg.com/xmldom/-/xmldom-0.1.31.tgz#b76c9a1bd9f0a9737e5a72dc37231cf38375e2ff"
+  integrity sha512-yS2uJflVQs6n+CyjHoaBmVSqIDevTAWrzMmjG1Gc7h1qQ7uVozNhEPJAwZXWyGQ/Gafo3fCwrcaokezLPupVyQ==
+
+xmldom@^0.1.22:
   version "0.1.27"
   resolved "https://registry.yarnpkg.com/xmldom/-/xmldom-0.1.27.tgz#d501f97b3bdb403af8ef9ecc20573187aadac0e9"
 
