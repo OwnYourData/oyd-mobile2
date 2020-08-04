@@ -61,7 +61,7 @@
 		"react-native-fused-location": "^0.0.11",
 		"react-native-geocoder": "^0.5.0",
 		"react-native-i18n": "^2.0.10",
-		"react-native-keyboard-aware-scroll-view": "^0.4.1",
+		"react-native-keyboard-aware-scroll-view": "^0.9.2",
 		"react-native-libsodium": "https://github.com/AnimalDesign/react-native-libsodium.git",
 		"react-native-material-buttons": "^0.5.0",
 		"react-native-material-dropdown": "^0.6.1",
