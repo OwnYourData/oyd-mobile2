@@ -1,5 +1,6 @@
 import React from 'react';
-import { AsyncStorage, NativeModules, Platform } from 'react-native';
+import { NativeModules, Platform } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 import I18n from 'react-native-i18n';
 import moment from 'moment';
 

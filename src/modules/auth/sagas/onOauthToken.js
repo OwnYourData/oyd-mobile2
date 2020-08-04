@@ -1,4 +1,4 @@
-import { AsyncStorage } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 import { put, call, select } from 'redux-saga/effects';
 import { actOnApiError } from '../../core/sagas/index';
 
@@ -51,7 +51,6 @@ export default function* ({ actions }:mixed, action:mixed) {
 		}));
 
 		yield put(actions.onEncryptCredentials({ nonce, cipher: value }));
-
 	} catch (e) {
 		const message = 'Error Logging in';
 		const type = 'login';

@@ -1,4 +1,4 @@
-import { AsyncStorage } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 import { captureSentryMessage } from '../../../utils/captureSentryMessage';
 
 const storeVaultUrl = async (vaultUrl:string):Object => {
