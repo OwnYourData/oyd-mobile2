@@ -1,5 +1,5 @@
 import React from 'react';
-import { WebView } from 'react-native';
+import { WebView } from 'react-native-webview';
 import * as UI from '../uiSystem/';
 import { height } from '../../utils/index';
 
