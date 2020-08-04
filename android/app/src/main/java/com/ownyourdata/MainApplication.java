@@ -4,6 +4,7 @@ import android.app.Application;
 import android.util.Log;
 
 import com.facebook.react.PackageList;
+import com.facebook.react.ReactNativeHost;
 import com.facebook.hermes.reactexecutor.HermesExecutorFactory;
 import com.facebook.react.bridge.JavaScriptExecutorFactory;
 
@@ -13,85 +14,51 @@ import android.content.res.Configuration;
 
 import com.facebook.soloader.SoLoader;
 import com.facebook.react.ReactPackage;
+
 import com.reactnativenavigation.NavigationApplication;
-import com.reactnativenavigation.controllers.ActivityCallbacks;
+import com.reactnativenavigation.react.NavigationReactNativeHost;
+
 import com.crashlytics.android.Crashlytics;
-
 import io.fabric.sdk.android.Fabric;
-
 
 import java.util.List;
 
-public class MainApplication extends NavigationApplication implements ReactApplication {
+public class MainApplication extends NavigationApplication {
+
+    private final ReactNativeHost mReactNativeHost =
+        new NavigationReactNativeHost(this) {
+            
+            @Override
+            public boolean getUseDeveloperSupport() {
+                return BuildConfig.DEBUG;
+            }
+
+            @Override
+            protected List<ReactPackage> getPackages() {
+                @SuppressWarnings("UnnecessaryLocalVariable")
+                List<ReactPackage> packages = new PackageList(this).getPackages();
+                // Packages that cannot be autolinked yet can be added manually here, for example:
+                // packages.add(new MyReactNativePackage());
+                return packages;
+            }
+
+            @Override
+            protected String getJSMainModuleName() {
+                return "index";
+            }
+        };
+        
+    @Override
+    public ReactNativeHost getReactNativeHost() {
+        return mReactNativeHost;
+    }
 
     @Override
     public void onCreate() {
         super.onCreate();
 
-        setActivityCallbacks(new ActivityCallbacks() {
-            @Override
-            public void onConfigurationChanged(Configuration newConfig) {
-                super.onConfigurationChanged(newConfig);
-                Intent intent = new Intent("onConfigurationChanged");
-                intent.putExtra("newConfig", newConfig);
-                sendBroadcast(intent);
-            }
-        });
-
-        SoLoader.init(this, false);
+        // removed SoLoader according to https://wix.github.io/react-native-navigation/docs/installing
+        // SoLoader.init(this, false);
         Fabric.with(this, new Crashlytics());
-    }
-
-    protected List<ReactPackage> getPackages() {
-        @SuppressWarnings("UnnecessaryLocalVariable")
-        List<ReactPackage> packages = new PackageList(this).getPackages();
-        // Packages that cannot be autolinked yet can be added manually here, for example:
-        // packages.add(new MyReactNativePackage());
-        return packages;
-        
-        // return Arrays.<ReactPackage>asList(
-        //         new RNGeocoderPackage(),
-        //         new FusedLocationPackage(),
-        //         new RCTCameraPackage(),
-        //         new ReactNativeRestartPackage(),
-        //         new ReactNativeExceptionHandlerPackage(),
-        //         new SvgPackage(),
-        //         new RNSpinkitPackage(),
-        //         new VectorIconsPackage(),
-        //         new RNFetchBlobPackage(),
-        //         new RNBackgroundFetchPackage(),
-        //         new RNI18nPackage(),
-        //         new SodiumPackage(),
-        //         new Sha256Package(),
-        //         new WifiCheckPackage(),
-        //         new OrientationPackage(),
-        //         new RNAndroidLocationEnablerPackage()
-        // );
-    }
-
-    @Override
-    public boolean isDebug() {
-        // Make sure you are using BuildConfig from your own application
-        return BuildConfig.DEBUG;
-    }
-
-    @Override
-    public List<ReactPackage> createAdditionalReactPackages() {
-        return getPackages();
-    }
-
-    @Override
-    public String getJSMainModuleName() {
-        return "index";
-    }
-
-    protected void attachBaseContext(Context base) {
-        super.attachBaseContext(base);
-        MultiDex.install(this);
-    }
-
-    @Override
-    public boolean clearHostOnActivityDestroy() {
-        return false;
     }
 }

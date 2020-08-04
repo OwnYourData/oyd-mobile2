@@ -3,28 +3,44 @@
 buildscript {
     ext {
         buildToolsVersion = "28.0.3"
-        minSdkVersion = 16
+        // minSdkVersion 19 required by react-native-navigation (https://wix.github.io/react-native-navigation/docs/installing)
+        minSdkVersion = 19
         compileSdkVersion = 28
         targetSdkVersion = 28
         supportLibVersion = "28.0.0"
+
+        // required by react-native-navigation (https://wix.github.io/react-native-navigation/docs/installing)
+        RNNKotlinVersion = "1.3.61" // Or any version above 1.3.x
+        RNNKotlinStdlib = "kotlin-stdlib-jdk8"
     }
     repositories {
 		google()
         jcenter()
-        mavenCentral()
         maven { url 'https://maven.fabric.io/public' }
+
+        // required by react-native-navigation (https://wix.github.io/react-native-navigation/docs/installing)
+        mavenLocal()
+        mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.1'
-        classpath 'io.fabric.tools:gradle:1.+'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+        
+        // build:gradle min version 3.5.3 required by react-native-navigation (https://wix.github.io/react-native-navigation/docs/installing)
+        classpath 'com.android.tools.build:gradle:3.5.3' // Or higher
+        classpath 'io.fabric.tools:gradle:1.+'
+        
+        // required by react-native-navigation (https://wix.github.io/react-native-navigation/docs/installing)
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.61" // Or whatever Kotlin version you've specified above
     }
 }
 
 allprojects {
     repositories {
+        // required by react-native-navigation (https://wix.github.io/react-native-navigation/docs/installing)
+        google()
         mavenLocal()
+        jcenter()
         maven {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
             url("$rootDir/../node_modules/react-native/android")
@@ -33,10 +49,10 @@ allprojects {
             // Android JSC is installed from npm
             url("$rootDir/../node_modules/jsc-android/dist")
         }
-        maven {
-            // Required for react-native-background-geolocation
-            url("${project(':react-native-background-geolocation').projectDir}/libs")
-        }
+        
+        // required by react-native-navigation (https://wix.github.io/react-native-navigation/docs/installing)
+        maven { url 'https://jitpack.io' }
+        
     }
     subprojects {
         project.configurations.all {

@@ -7,6 +7,7 @@ const primary = '#000000';
 const white = '#ffffff';
 const blue = '#4472C4';
 
+// TODO: this still has to be reworked to match the previous settings
 const navigatorStyle = col => ({
 	navigatorStyle: {
 		navBarHidden: true, // make the nav bar hidden
@@ -38,6 +39,7 @@ const navigatorButtons = {
 	]
 };
 
+// TODO: this still has to be reworked to match the previous settings
 const navProps = (col = primary, key = '') => ({
 	title: key,
 	...navigatorStyle(col),
@@ -45,6 +47,7 @@ const navProps = (col = primary, key = '') => ({
 });
 
 export default class {
+	// TODO: this still has to be reworked to match the previous settings
 	static routeTo = (props, key, passProps = {}) => {
 		props.navigator.push({
 			screen: `${name}.${key}`,
@@ -53,6 +56,7 @@ export default class {
 		});
 	};
 
+	// TODO: this still has to be reworked to match the previous settings
 	static resetTo = (props, key) => {
 		props.navigator.resetTo({
 			screen: `${name}.${key}`,
