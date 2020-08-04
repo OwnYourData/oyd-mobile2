@@ -78,7 +78,7 @@
 		"react-native-webview": "^10.3.3",
 		"react-redux": "^5.0.6",
 		"redux": "^3.7.2",
-		"redux-persist": "^5.4.0",
+		"redux-persist": "^6.0.0",
 		"redux-persist-filesystem-storage": "^1.2.0",
 		"redux-persist-transform-immutable": "^4.3.0",
 		"redux-saga": "^0.16.0",
