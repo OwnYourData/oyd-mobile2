@@ -1,6 +1,5 @@
 import React from 'react';
-import { withNetworkConnectivity } from 'react-native-offline';
-import Orientation from 'react-native-orientation-locker';
+import Orientation from 'react-native-orientation';
 
 import * as UI from '../uiSystem/';
 import { NoModules, ModuleList } from './components';
