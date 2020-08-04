@@ -49,7 +49,7 @@
 		"react": "16.8.6",
 		"react-native": "0.60.6",
 		"react-native-android-location-enabler": "^1.0.5",
-		"react-native-background-fetch": "^2.4.0",
+		"react-native-background-fetch": "~3.0.6",
 		"react-native-background-geolocation": "^3.8.1",
 		"react-native-camera": "^0.12.0",
 		"react-native-easy-grid": "^0.1.16",
