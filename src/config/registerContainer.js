@@ -103,7 +103,7 @@ export default (store:mixed, sceneProps:SceneProps):Object<{}> => {
 	/**
 	 * Connect module to redux
 	 */
-	Navigation.registerComponent(`${appname}.${namespace}`, () => ConnectComponent, store, Provider);
+	Navigation.registerComponentWithRedux(`${appname}.${namespace}`, () => ConnectComponent, Provider, store);
 	/**
 	 * Return the component to use when registering with the navigation
 	 */

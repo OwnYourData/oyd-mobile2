@@ -63,21 +63,28 @@ const startApp = async () => {
 
 export default async () => {
 	if (Platform.OS === 'ios') return startApp();
-	Promise.resolve(Navigation.isAppLaunched())
-		.then(async (appLaunched) => {
-			if (appLaunched) {
-				await startApp(); // App is launched -> show UI
-			} else {
-				new NativeEventsReceiver().appLaunched(startApp); // App hasn't been launched yet -> show the UI only when needed.
-			}
-		})
-		.catch(async (error) => {
-			console.log(error);
-			await captureSentryMessage({
-				error: JSON.stringify(error),
-				message: 'Error while starting App: isAppLaunched method',
-				status: 0,
-				type: 'n/a',
-			});
-		});
+
+	Navigation.events().registerAppLaunchedListener(() => startApp());
+
+	// TODO: find a way that represents the old way of starting the app
+	// with the new version of react-native-navigation
+	// especially when it comes to error handling
+
+	// Promise.resolve(Navigation.isAppLaunched())
+	// 	.then(async (appLaunched) => {
+	// 		if (appLaunched) {
+	// 			await startApp(); // App is launched -> show UI
+	// 		} else {
+	// 			new NativeEventsReceiver().appLaunched(startApp); // App hasn't been launched yet -> show the UI only when needed.
+	// 		}
+	// 	})
+	// 	.catch(async (error) => {
+	// 		console.log(error);
+	// 		await captureSentryMessage({
+	// 			error: JSON.stringify(error),
+	// 			message: 'Error while starting App: isAppLaunched method',
+	// 			status: 0,
+	// 			type: 'n/a',
+	// 		});
+	// 	});
 };

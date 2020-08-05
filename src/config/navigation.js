@@ -67,18 +67,44 @@ export default class {
 	static popToRoot = props => props.navigator.popToRoot({ animated });
 
 	static startSingleScreenApp = (key, animationType = 'slide-down', passProps = {}) => {
-		Navigation.startSingleScreenApp({
-			screen: {
-				screen: `${name}.${key}`,
-				...navProps(passProps.white ? white : blue, key)
-			},
-			passProps,
-			animated,
-			animationType, // 'none', 'slide-down', 'fade'
-			appStyle: {
-				hideBackButtonTitle: true // Hide back button title. Default is false. If `backButtonTitle` provided so it will take into account and the `backButtonTitle` value will show. iOS only
-			}
+		// Navigation.startSingleScreenApp({
+		// 	screen: {
+		// 		screen: `${name}.${key}`,
+		// 		...navProps(passProps.white ? white : blue, key)
+		// 	},
+		// 	passProps,
+		// 	animated,
+		// 	animationType, // 'none', 'slide-down', 'fade'
+		// 	appStyle: {
+		// 		hideBackButtonTitle: true // Hide back button title. Default is false. If `backButtonTitle` provided so it will take into account and the `backButtonTitle` value will show. iOS only
+		// 	}
 
+		// });
+
+		// TODO: this still has to be reworked to match the previous settings
+		Navigation.setDefaultOptions({
+			topBar: {
+				backButton: {}, // disables back button in title
+			},
+			sideMenu: {
+				left: {
+					visible: false,
+					enabled: true
+				}
+			},
+		});
+		Navigation.setRoot({
+			root: {
+				stack: {
+					children: [
+						{
+							component: {
+								name: `${name}.${key}`,
+							}
+						}
+					]
+				}
+			}
 		});
 	};
 

@@ -9,6 +9,7 @@ import { connect } from 'react-redux';
 import { setJSExceptionHandler } from 'react-native-exception-handler';
 import Orientation from 'react-native-orientation';
 import Toast from 'react-native-easy-toast';
+import { Navigation } from 'react-native-navigation';
 
 import { Header, HeaderVert } from '../';
 import { isIos } from '../../../utils';
@@ -58,7 +59,12 @@ class ModuleLayout extends React.Component<Props> {
 		};
 		this.props = props;
 		this.toast = null;
-		props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
+
+		// we only track "appear" events here
+		// previously, this was events with id 'willAppear'
+		// if necessary, we should also register for registerComponentDidDisappearListener
+		// or other events -> https://wix.github.io/react-native-navigation/api/events/
+		Navigation.events().registerComponentDidAppearListener(this.onNavigatorEvent);
 	}
 
 	componentDidMount() {
@@ -73,7 +79,7 @@ class ModuleLayout extends React.Component<Props> {
 				nonce: nextProps.auth.get('credentials').nonce,
 				cipher: nextProps.auth.get('credentials').value,
 			});
-		}*/
+		} */
 
 		if (nextProps.core.get('route').key !== 'AUTH' &&
 			!nextProps.core.get('user').get('access_token')
@@ -84,8 +90,8 @@ class ModuleLayout extends React.Component<Props> {
 
 	componentDidUpdate(nextProps) {
 		if (!('event' in this.props.core.get('scene'))) return;
-		const { key, event: { id } } = this.props.core.get('scene');
-		if (key === 'DASHBOARD/APP_DETAIL' && id === 'willAppear' && isIos) {
+		const { key, } = this.props.core.get('scene');
+		if (key === 'DASHBOARD/APP_DETAIL' && isIos) {
 			this.onCheckOrientation();
 		}
 		this.checkErrors();
@@ -119,9 +125,9 @@ class ModuleLayout extends React.Component<Props> {
 		}
 	}
 
-	onNavigatorEvent = (event) => {
-		const route = this.props.testID.split('.');
-		this.props.onScreenChangedEvent({ event, key: route[1] });
+	onNavigatorEvent = (component) => {
+		const name = component.componentName.split('.')[1];
+		this.props.onScreenChangedEvent({ key: name, });
 	};
 
 	onPressBackBtn = () => {
