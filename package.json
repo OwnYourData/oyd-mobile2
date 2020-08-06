@@ -84,7 +84,7 @@
 		"redux-saga": "^0.16.0",
 		"styled-components": "^4.0.0",
 		"uglify-es": "3.2.2",
-		"yarn": "^1.5.1"
+		"yarn": "^1.22.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.8.4",
