@@ -10470,6 +10470,13 @@ react-native-background-geolocation@^3.8.1:
     react-native-background-fetch "~3.1.0"
     xcode "^0.9.1"
 
+react-native-camera@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/react-native-camera/-/react-native-camera-0.12.0.tgz#51afa8acf1696d9d973074b6454c5ba2cce6ac18"
+  integrity sha512-Ja0/cfiaE/p8qbNpvRu/r6gaJqpXsZyVWO0g8s3yrdC/JgyMMMrzemGmptSCdkYvrfuEN8pga94O+a07uD4i3w==
+  dependencies:
+    prop-types "^15.5.10"
+
 react-native-compat@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/react-native-compat/-/react-native-compat-1.0.0.tgz#491dbd8a0105ac061b8d0d926463ce6a3dff33bc"
