@@ -8,19 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0075ABF6DC43ECC17F64B97B /* libPods-ownyourdata.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31516AC661378CBA1105F0AE /* libPods-ownyourdata.a */; };
-		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
-		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
-		00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
-		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
-		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
-		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
-		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
-		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		4674ACDA201EB9FC0050A158 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4674ACD8201EB9FB0050A158 /* Fabric.framework */; };
 		4674ACDB201EB9FC0050A158 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4674ACD9201EB9FC0050A158 /* Crashlytics.framework */; };
 		468CA4F220A59654005125AF /* WifiCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 468CA4F120A59654005125AF /* WifiCheck.m */; };
@@ -28,17 +19,22 @@
 		468D657020505C4200294EC0 /* TSBackgroundFetch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468D656F20505C4200294EC0 /* TSBackgroundFetch.framework */; };
 		477769F89459498EB5B712B7 /* Calibri.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FCAEEE268924556B0C1903D /* Calibri.ttf */; };
 		5E552CEC9E934A13B19BB9CC /* libCocoaLumberjack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B1887BA05F4BDE88333D5F /* libCocoaLumberjack.a */; };
-		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		624F9A39D1DB4231900C8E4C /* Calibri Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6D01171DF204725B2287705 /* Calibri Bold Italic.ttf */; };
 		65D2AEDF14BA47FFB3B315A8 /* Calibri Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10F734486758442CADD0D780 /* Calibri Bold.ttf */; };
 		6A1C89FE4E0F4C97949CCE31 /* Arial Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76405165D4634C86AAE39A83 /* Arial Bold Italic.ttf */; };
 		6A913BAF3EF44D3B842512E6 /* Arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B3F7BA2C11A46808BEE24FF /* Arial.ttf */; };
-		708156B6EFBF44549E99A407 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 605DA9F320E047B5A89C19AD /* libRCTActionSheet.a */; };
 		712E1136E775483797BF548E /* Calibri Italic.TTF in Resources */ = {isa = PBXBuildFile; fileRef = C6753352722B4D959A5BFB6A /* Calibri Italic.TTF */; };
-		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		840D952824F65DFB00AA4110 /* libReact-RCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840D952724F65DFB00AA4110 /* libReact-RCTBlob.a */; };
+		840D952A24F65E1400AA4110 /* libReact-RCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840D952924F65E1400AA4110 /* libReact-RCTAnimation.a */; };
+		840D952C24F65E4500AA4110 /* libReact-Core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840D952B24F65E4500AA4110 /* libReact-Core.a */; };
+		840D952E24F65E8400AA4110 /* libReact-RCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840D952D24F65E8400AA4110 /* libReact-RCTImage.a */; };
+		840D953024F65E8C00AA4110 /* libReact-RCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840D952F24F65E8C00AA4110 /* libReact-RCTLinking.a */; };
+		840D953224F65E9300AA4110 /* libReact-RCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840D953124F65E9300AA4110 /* libReact-RCTNetwork.a */; };
+		840D953424F65E9900AA4110 /* libReact-RCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840D953324F65E9900AA4110 /* libReact-RCTSettings.a */; };
+		840D953624F65EA000AA4110 /* libReact-RCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840D953524F65EA000AA4110 /* libReact-RCTText.a */; };
+		840D953824F65EA600AA4110 /* libReact-RCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840D953724F65EA600AA4110 /* libReact-RCTVibration.a */; };
 		A4226D7B144C46749BF03DFF /* Calibri Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C4C8F8D5E2F47D0A652FEBD /* Calibri Italic.ttf */; };
 		A4EDC31B3CFB4C77AA90F366 /* RNBackgroundFetch+AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 522E87BA73F04CC3AC793B23 /* RNBackgroundFetch+AppDelegate.m */; };
-		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		B342F2BF059D49D0953C034E /* Arial Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39B1C95EA87740E6AF07BDEF /* Arial Italic.ttf */; };
 		D8E708E404614394BDB89DCC /* Arial Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6DA59CD21AFB4A9C967E4531 /* Arial Bold.ttf */; };
 		E58E1C6860DE4E5D9183A740 /* Calibri Bold.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 644818A67BC5449CB4FFB48E /* Calibri Bold.TTF */; };
@@ -357,6 +353,15 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		7DE9028F650D4900817CA113 /* Calibri Bold Italic.TTF */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Calibri Bold Italic.TTF"; path = "../fonts/Calibri Bold Italic.TTF"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		840D952724F65DFB00AA4110 /* libReact-RCTBlob.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTBlob.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		840D952924F65E1400AA4110 /* libReact-RCTAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		840D952B24F65E4500AA4110 /* libReact-Core.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-Core.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		840D952D24F65E8400AA4110 /* libReact-RCTImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTImage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		840D952F24F65E8C00AA4110 /* libReact-RCTLinking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTLinking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		840D953124F65E9300AA4110 /* libReact-RCTNetwork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTNetwork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		840D953324F65E9900AA4110 /* libReact-RCTSettings.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTSettings.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		840D953524F65EA000AA4110 /* libReact-RCTText.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTText.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		840D953724F65EA600AA4110 /* libReact-RCTVibration.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTVibration.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95FECC5307C94434A14FED59 /* libRNLocation.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNLocation.a; sourceTree = "<group>"; };
 		A168CE95D3D04BA2013B49F9 /* Pods-ownyourdata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ownyourdata.release.xcconfig"; path = "Target Support Files/Pods-ownyourdata/Pods-ownyourdata.release.xcconfig"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
@@ -372,22 +377,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840D953824F65EA600AA4110 /* libReact-RCTVibration.a in Frameworks */,
+				840D953624F65EA000AA4110 /* libReact-RCTText.a in Frameworks */,
+				840D953424F65E9900AA4110 /* libReact-RCTSettings.a in Frameworks */,
+				840D953224F65E9300AA4110 /* libReact-RCTNetwork.a in Frameworks */,
+				840D953024F65E8C00AA4110 /* libReact-RCTLinking.a in Frameworks */,
+				840D952E24F65E8400AA4110 /* libReact-RCTImage.a in Frameworks */,
+				840D952C24F65E4500AA4110 /* libReact-Core.a in Frameworks */,
+				840D952A24F65E1400AA4110 /* libReact-RCTAnimation.a in Frameworks */,
+				840D952824F65DFB00AA4110 /* libReact-RCTBlob.a in Frameworks */,
 				468D657020505C4200294EC0 /* TSBackgroundFetch.framework in Frameworks */,
 				4674ACDA201EB9FC0050A158 /* Fabric.framework in Frameworks */,
 				4674ACDB201EB9FC0050A158 /* Crashlytics.framework in Frameworks */,
-				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
-				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
-				146834051AC3E58100842450 /* libReact.a in Frameworks */,
-				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
-				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
-				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
-				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
-				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
-				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
-				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
-				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
-				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				708156B6EFBF44549E99A407 /* libRCTActionSheet.a in Frameworks */,
 				5E552CEC9E934A13B19BB9CC /* libCocoaLumberjack.a in Frameworks */,
 				0075ABF6DC43ECC17F64B97B /* libPods-ownyourdata.a in Frameworks */,
 			);
@@ -522,6 +523,15 @@
 		4610C01E20408E0000DBB302 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				840D953724F65EA600AA4110 /* libReact-RCTVibration.a */,
+				840D953524F65EA000AA4110 /* libReact-RCTText.a */,
+				840D953324F65E9900AA4110 /* libReact-RCTSettings.a */,
+				840D953124F65E9300AA4110 /* libReact-RCTNetwork.a */,
+				840D952F24F65E8C00AA4110 /* libReact-RCTLinking.a */,
+				840D952D24F65E8400AA4110 /* libReact-RCTImage.a */,
+				840D952B24F65E4500AA4110 /* libReact-Core.a */,
+				840D952924F65E1400AA4110 /* libReact-RCTAnimation.a */,
+				840D952724F65DFB00AA4110 /* libReact-RCTBlob.a */,
 				468D656F20505C4200294EC0 /* TSBackgroundFetch.framework */,
 				31516AC661378CBA1105F0AE /* libPods-ownyourdata.a */,
 			);
