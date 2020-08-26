@@ -21,7 +21,6 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		465980A12049904700E80407 /* RNLibSodium.m in Sources */ = {isa = PBXBuildFile; fileRef = 465980A02049904700E80407 /* RNLibSodium.m */; };
 		4674ACDA201EB9FC0050A158 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4674ACD8201EB9FB0050A158 /* Fabric.framework */; };
 		4674ACDB201EB9FC0050A158 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4674ACD9201EB9FC0050A158 /* Crashlytics.framework */; };
 		468CA4F220A59654005125AF /* WifiCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 468CA4F120A59654005125AF /* WifiCheck.m */; };
@@ -1171,7 +1170,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				465980A12049904700E80407 /* RNLibSodium.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				468CA4F220A59654005125AF /* WifiCheck.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
