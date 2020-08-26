@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0075ABF6DC43ECC17F64B97B /* libPods-ownyourdata.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31516AC661378CBA1105F0AE /* libPods-ownyourdata.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
-		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		4674ACDA201EB9FC0050A158 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4674ACD8201EB9FB0050A158 /* Fabric.framework */; };
@@ -1058,7 +1057,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				6A1C89FE4E0F4C97949CCE31 /* Arial Bold Italic.ttf in Resources */,
 				D8E708E404614394BDB89DCC /* Arial Bold.ttf in Resources */,
 				B342F2BF059D49D0953C034E /* Arial Italic.ttf in Resources */,
