@@ -10,7 +10,7 @@
 #endif
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
-#import "Orientation.h"
+#import <Orientation.h>
 
 #ifdef FB_SONARKIT_ENABLED
 #import <FlipperKit/FlipperClient.h>
