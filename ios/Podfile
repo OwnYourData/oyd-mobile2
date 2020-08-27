@@ -16,6 +16,8 @@ target 'ownyourdata' do
   permissions_path = '../node_modules/react-native-permissions/ios'
   pod 'Permission-LocationAlways', :path => "#{permissions_path}/LocationAlways.podspec"
   pod 'Permission-LocationWhenInUse', :path => "#{permissions_path}/LocationWhenInUse.podspec"
+  # needed by qr code scanner
+  pod 'Permission-Camera', :path => "#{permissions_path}/Camera.podspec"
 
   # Enables Flipper.
   #

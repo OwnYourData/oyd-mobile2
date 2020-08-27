@@ -74,6 +74,8 @@ PODS:
   - OpenSSL-Universal (1.0.2.19):
     - OpenSSL-Universal/Static (= 1.0.2.19)
   - OpenSSL-Universal/Static (1.0.2.19)
+  - Permission-Camera (2.2.0):
+    - RNPermissions
   - Permission-LocationAlways (2.2.0):
     - RNPermissions
   - Permission-LocationWhenInUse (2.2.0):
@@ -384,6 +386,7 @@ DEPENDENCIES:
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - libsodium (~> 1.0)
+  - Permission-Camera (from `../node_modules/react-native-permissions/ios/Camera.podspec`)
   - Permission-LocationAlways (from `../node_modules/react-native-permissions/ios/LocationAlways.podspec`)
   - Permission-LocationWhenInUse (from `../node_modules/react-native-permissions/ios/LocationWhenInUse.podspec`)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
@@ -455,6 +458,8 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native/third-party-podspecs/Folly.podspec"
   glog:
     :podspec: "../node_modules/react-native/third-party-podspecs/glog.podspec"
+  Permission-Camera:
+    :path: "../node_modules/react-native-permissions/ios/Camera.podspec"
   Permission-LocationAlways:
     :path: "../node_modules/react-native-permissions/ios/LocationAlways.podspec"
   Permission-LocationWhenInUse:
@@ -553,6 +558,7 @@ SPEC CHECKSUMS:
   glog: 40a13f7840415b9a77023fbcae0f1e6f43192af3
   libsodium: 9a8faa5ef2fa0d2d57bd7f7d79bf8fb7c1a9f0ea
   OpenSSL-Universal: 8b48cc0d10c1b2923617dfe5c178aa9ed2689355
+  Permission-Camera: 9ff12884205fb282b4a22b9e8c358ba53cee7567
   Permission-LocationAlways: 8026796fd0fc8d735adbd84cd1ae28a4fb22ac22
   Permission-LocationWhenInUse: eba08412fee84a8ac5140472d83aef2427a5befe
   RCTRequired: f13f25e7b12f925f1f6a6a8c69d929a03c0129fe
@@ -595,6 +601,6 @@ SPEC CHECKSUMS:
   Yoga: 7740b94929bbacbddda59bf115b5317e9a161598
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 8d9ad0516bdf7fcbe96a887b00daf1586ed27040
+PODFILE CHECKSUM: b16dd93044b67af57ba62026d30e908f496e52d8
 
 COCOAPODS: 1.9.3
