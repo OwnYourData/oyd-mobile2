@@ -149,6 +149,8 @@ android {
         versionCode 14
         versionName "0.4.5"
         multiDexEnabled = true
+
+        missingDimensionStrategy 'react-native-camera', 'general'
     }
     signingConfigs {
         release {
