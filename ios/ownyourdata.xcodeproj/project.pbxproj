@@ -1213,10 +1213,8 @@
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 3437M53R66;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../node_modules/react-native-background-fetch/ios/**",
+					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/../node_modules/react-native-background-geolocation/ios/**",
-					"$(SDKROOT)/../node_modules/react-native-background-geolocation/ios/RNBackgroundGeolocation",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1266,10 +1264,8 @@
 				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 3437M53R66;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../node_modules/react-native-background-fetch/ios/**",
+					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/../node_modules/react-native-background-geolocation/ios/**",
-					"$(SDKROOT)/../node_modules/react-native-background-geolocation/ios/RNBackgroundGeolocation",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
