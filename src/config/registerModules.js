@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
+import AsyncStorage from '@react-native-community/async-storage';
 import immutableTransform from 'redux-persist-transform-immutable';
 import hardSet from 'redux-persist/lib/stateReconciler/hardSet';
 
@@ -115,7 +115,7 @@ export default () =>
 			key: 'root',
 			debug: true,
 			transforms: [immutableTransform()],
-			storage,
+			storage: AsyncStorage,
 			stateReconciler: hardSet,
 		};
 		const store = configureStore(persistReducer(rootConfig, combineReducers(rootReducer)));
