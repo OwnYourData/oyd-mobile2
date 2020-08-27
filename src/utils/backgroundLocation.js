@@ -1,5 +1,5 @@
 import Permissions from 'react-native-permissions';
-import { NativeModules } from 'react-native';
+import { NativeModules, Platform } from 'react-native';
 
 import AppLocation from './location';
 import PostLocationApi from '../modules/settings/services';
@@ -15,7 +15,10 @@ export const initBackgroundTask = async () => {
 		/**
 		 * ## Check if the permissions are set before we get the location data
 		 */
-		const response = await Permissions.check('location');
+		const response = await Permissions.check(Platform.select({
+			android: Permissions.PERMISSIONS.ANDROID.ACCESS_BACKGROUND_LOCATION,
+			ios: Permissions.PERMISSIONS.IOS.LOCATION_ALWAYS,
+		}));
 		if (response === 'authorized') await getLocation(true);
 	} catch (error) {
 		await captureSentryMessage({
