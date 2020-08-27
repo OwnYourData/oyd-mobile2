@@ -102,7 +102,7 @@
 		"jest": "25.1.0",
 		"metro-react-native-babel-preset": "^0.59.0",
 		"prop-types": "^15.6.0",
-		"react-dom": "16.0.0",
+		"react-dom": "16.0.1",
 		"react-native-debugger-open": "^0.3.25",
 		"react-test-renderer": "16.13.1"
 	},
