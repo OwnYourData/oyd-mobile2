@@ -23,6 +23,7 @@
 		6A1C89FE4E0F4C97949CCE31 /* Arial Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76405165D4634C86AAE39A83 /* Arial Bold Italic.ttf */; };
 		6A913BAF3EF44D3B842512E6 /* Arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B3F7BA2C11A46808BEE24FF /* Arial.ttf */; };
 		712E1136E775483797BF548E /* Calibri Italic.TTF in Resources */ = {isa = PBXBuildFile; fileRef = C6753352722B4D959A5BFB6A /* Calibri Italic.TTF */; };
+		8400284D24F7BD5800DBE46E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8400284C24F7BD5800DBE46E /* LaunchScreen.storyboard */; };
 		840D952824F65DFB00AA4110 /* libReact-RCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840D952724F65DFB00AA4110 /* libReact-RCTBlob.a */; };
 		840D952A24F65E1400AA4110 /* libReact-RCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840D952924F65E1400AA4110 /* libReact-RCTAnimation.a */; };
 		840D952C24F65E4500AA4110 /* libReact-Core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840D952B24F65E4500AA4110 /* libReact-Core.a */; };
@@ -315,7 +316,6 @@
 		13B07F961A680F5B00A75B9A /* ownyourdata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ownyourdata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ownyourdata/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ownyourdata/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ownyourdata/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ownyourdata/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ownyourdata/main.m; sourceTree = "<group>"; };
@@ -354,6 +354,7 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		7DE9028F650D4900817CA113 /* Calibri Bold Italic.TTF */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Calibri Bold Italic.TTF"; path = "../fonts/Calibri Bold Italic.TTF"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		8400284C24F7BD5800DBE46E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		840D952724F65DFB00AA4110 /* libReact-RCTBlob.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTBlob.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		840D952924F65E1400AA4110 /* libReact-RCTAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		840D952B24F65E4500AA4110 /* libReact-Core.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-Core.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -489,7 +490,6 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				522E87BA73F04CC3AC793B23 /* RNBackgroundFetch+AppDelegate.m */,
 				4659806B2049903B00E80407 /* RNLibSodium.h */,
@@ -498,6 +498,7 @@
 				468CA4F120A59654005125AF /* WifiCheck.m */,
 				468CA4F320A59766005125AF /* Reachability.m */,
 				468CA4F520A59773005125AF /* Reachability.h */,
+				8400284C24F7BD5800DBE46E /* LaunchScreen.storyboard */,
 			);
 			name = ownyourdata;
 			sourceTree = "<group>";
@@ -1064,6 +1065,7 @@
 				6A913BAF3EF44D3B842512E6 /* Arial.ttf in Resources */,
 				477769F89459498EB5B712B7 /* Calibri.ttf in Resources */,
 				624F9A39D1DB4231900C8E4C /* Calibri Bold Italic.ttf in Resources */,
+				8400284D24F7BD5800DBE46E /* LaunchScreen.storyboard in Resources */,
 				65D2AEDF14BA47FFB3B315A8 /* Calibri Bold.ttf in Resources */,
 				A4226D7B144C46749BF03DFF /* Calibri Italic.ttf in Resources */,
 				FA28F51F1E9947B191394DAE /* Calibri Bold Italic.TTF in Resources */,
@@ -1196,18 +1198,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		13B07FB11A68108700A75B9A /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				13B07FB21A68108700A75B9A /* Base */,
-			);
-			name = LaunchScreen.xib;
-			path = ownyourdata;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
