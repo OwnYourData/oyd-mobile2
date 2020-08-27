@@ -1,7 +1,9 @@
+import React from 'react';
 import { Provider, connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { all } from 'redux-saga/effects';
 import { Navigation } from 'react-native-navigation';
+import { NetworkProvider } from 'react-native-offline';
 
 import { name as appname } from '../../app.json';
 import { nav } from './';
@@ -11,6 +13,22 @@ import {
 	callApi,
 	listenTo,
 } from '../utils';
+
+function withNetworkProvider(WrappedComponent) {
+	return class extends React.PureComponent {
+		render() {
+			return (
+				// TODO: this has to be tested in real life
+				// Does devices really respond to network changes?
+				<NetworkProvider
+					pingInterval={30000}
+				>
+					<WrappedComponent {...this.props} />
+				</NetworkProvider>
+			);
+		}
+	};
+}
 
 /**
  * Properties required to connect to redux
@@ -103,7 +121,7 @@ export default (store:mixed, sceneProps:SceneProps):Object<{}> => {
 	/**
 	 * Connect module to redux
 	 */
-	Navigation.registerComponentWithRedux(`${appname}.${namespace}`, () => ConnectComponent, Provider, store);
+	Navigation.registerComponentWithRedux(`${appname}.${namespace}`, () => withNetworkProvider(ConnectComponent), Provider, store);
 	/**
 	 * Return the component to use when registering with the navigation
 	 */

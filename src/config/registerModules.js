@@ -3,6 +3,7 @@ import { persistReducer } from 'redux-persist';
 import AsyncStorage from '@react-native-community/async-storage';
 import immutableTransform from 'redux-persist-transform-immutable';
 import hardSet from 'redux-persist/lib/stateReconciler/hardSet';
+import { reducer as network } from 'react-native-offline';
 
 import modules from '../modules';
 import { registerContainer } from './';
@@ -13,7 +14,9 @@ import { actionCreator } from '../utils';
 export default () =>
 	new Promise((resolve) => {
 		const container = [];
-		const rootReducer = {};
+		const rootReducer = {
+			network,
+		};
 		let coreActions = {};
 
 		modules.forEach((module) => {

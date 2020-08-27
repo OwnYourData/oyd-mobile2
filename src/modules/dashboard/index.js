@@ -49,5 +49,6 @@ export default {
 		locationData: state.core.get('locationData'),
 		privateKey: state.auth.get('credentials').privateKey,
 		nonce: state.auth.get('credentials').nonce,
+		isConnected: state.network.isConnected,
 	}),
 };

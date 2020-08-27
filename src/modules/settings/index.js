@@ -47,5 +47,6 @@ export default {
 		hasError: state.settings.get('hasError'),
 		errorText: state.settings.get('errorText'),
 		isPosting: state.settings.get('isPosting'),
+		isConnected: state.network.isConnected,
 	}),
 };
