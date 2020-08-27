@@ -9,7 +9,13 @@ target 'ownyourdata' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  # used as native module in file "RNLibSodium.m"
   pod 'libsodium', '~> 1.0'
+
+  # Needed according to https://github.com/react-native-community/react-native-permissions
+  permissions_path = '../node_modules/react-native-permissions/ios'
+  pod 'Permission-LocationAlways', :path => "#{permissions_path}/LocationAlways.podspec"
+  pod 'Permission-LocationWhenInUse', :path => "#{permissions_path}/LocationWhenInUse.podspec"
 
   # Enables Flipper.
   #
