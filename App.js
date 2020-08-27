@@ -62,8 +62,6 @@ const startApp = async () => {
 };
 
 export default async () => {
-	if (Platform.OS === 'ios') return startApp();
-
 	Navigation.events().registerAppLaunchedListener(() => startApp());
 
 	// TODO: find a way that represents the old way of starting the app
