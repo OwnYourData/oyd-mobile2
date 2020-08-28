@@ -10646,15 +10646,14 @@ react-native-material-buttons@^0.5.0:
     prop-types "^15.5.9"
     react-native-material-ripple "^0.7.0"
 
-react-native-material-dropdown@^0.6.1:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/react-native-material-dropdown/-/react-native-material-dropdown-0.6.1.tgz#fd80d232b9bfdd97ae2ac12bf40fd5fcce8df35a"
-  integrity sha1-/YDSMrm/3ZeuKsEr9A/V/M6N81o=
+"react-native-material-dropdown@https://github.com/OwnYourData/react-native-material-dropdown.git":
+  version "0.11.1"
+  resolved "https://github.com/OwnYourData/react-native-material-dropdown.git#ac35e31c97e3505eb0923e068f276c0c507fd8ba"
   dependencies:
     prop-types "^15.5.9"
     react-native-material-buttons "^0.5.0"
-    react-native-material-ripple "^0.7.0"
-    react-native-material-textfield "^0.10.0"
+    react-native-material-ripple "^0.8.0"
+    react-native-material-textfield "https://github.com/OwnYourData/react-native-material-textfield.git"
 
 react-native-material-ripple@^0.7.0:
   version "0.7.5"
@@ -10663,17 +10662,16 @@ react-native-material-ripple@^0.7.0:
   dependencies:
     prop-types "^15.5.10"
 
-react-native-material-textfield@^0.10.0:
-  version "0.10.4"
-  resolved "https://registry.yarnpkg.com/react-native-material-textfield/-/react-native-material-textfield-0.10.4.tgz#0e3b566bc5bc7976a809a363f5b1fe69b7ab371b"
-  integrity sha1-DjtWa8W8eXaoCaNj9bH+aberNxs=
+react-native-material-ripple@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/react-native-material-ripple/-/react-native-material-ripple-0.8.0.tgz#b8c24e6fdea2af2a21e8468b1f40b35483019e2f"
+  integrity sha1-uMJOb96iryoh6EaLH0CzVIMBni8=
   dependencies:
-    prop-types "^15.5.9"
+    prop-types "^15.5.10"
 
-react-native-material-textfield@^0.16.1:
+"react-native-material-textfield@https://github.com/OwnYourData/react-native-material-textfield.git":
   version "0.16.1"
-  resolved "https://registry.yarnpkg.com/react-native-material-textfield/-/react-native-material-textfield-0.16.1.tgz#649e71344bb8a7225d5cea7c7b51cd38bcb2bbfc"
-  integrity sha512-pcV/ic3i6vYEODS7pvAMUYJ+evkzIB8cjXtSzkab9rBtYNGRpAlM0Yp8QNnjZ7foZqkj9Ynav0nguWcuJST10A==
+  resolved "https://github.com/OwnYourData/react-native-material-textfield.git#9e5313e1e87e8c71b25408c0188ff71661673c3d"
   dependencies:
     prop-types "^15.5.9"
 
