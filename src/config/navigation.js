@@ -48,23 +48,15 @@ const navProps = (col = primary, key = '') => ({
 
 export default class {
 	// TODO: this still has to be reworked to match the previous settings
+	// Especially when it comes to 'navigatorStyle'
 	static routeTo = (props, key, passProps = {}) => {
-		props.navigator.push({
-			screen: `${name}.${key}`,
-			passProps,
-			...navProps(white, key)
+		Navigation.push(props.componentId, {
+			component: {
+				name: `${name}.${key}`,
+				passProps,
+			},
 		});
 	};
-
-	// TODO: this still has to be reworked to match the previous settings
-	static resetTo = (props, key) => {
-		props.navigator.resetTo({
-			screen: `${name}.${key}`,
-			...navProps(white, key)
-		});
-	};
-
-	static popToRoot = props => props.navigator.popToRoot({ animated });
 
 	static startSingleScreenApp = (key, animationType = 'slide-down', passProps = {}) => {
 		// Navigation.startSingleScreenApp({
@@ -84,7 +76,8 @@ export default class {
 		// TODO: this still has to be reworked to match the previous settings
 		Navigation.setDefaultOptions({
 			topBar: {
-				backButton: {}, // disables back button in title
+				visible: false,
+				height: 0,
 			},
 			sideMenu: {
 				left: {
