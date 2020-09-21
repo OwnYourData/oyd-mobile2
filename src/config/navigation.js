@@ -12,6 +12,8 @@ export default class {
 		});
 	};
 
+	static popRoute = (props) => Navigation.pop(props.componentId);
+
 	static startSingleScreenApp = (key, animationType = 'slide-down', passProps = {}) => {
 		Navigation.setDefaultOptions({
 			topBar: {
@@ -39,19 +41,6 @@ export default class {
 			}
 		});
 	};
-
-	static showLightBox = (key, passProps = {}) => (
-		Navigation.showLightBox({
-			screen: `${name}.${key}`,
-			passProps,
-			style: {
-				backgroundBlur: 'dark', // 'dark' / 'light' / 'xlight' / 'none' - the type of blur on the background
-				width: width * 0.8
-			}
-		})
-	);
-
-	static dismissLightBox = (passProps = {}) => (Navigation.dismissLightBox({ passProps }));
 
 	static showModal = (key, passProps) => (
 		Navigation.showModal({

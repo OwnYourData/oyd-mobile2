@@ -14,7 +14,7 @@ class Header extends React.PureComponent {
 					text='('
 				/>
 				<UI.Button
-					onPress={() => this.props.showLightBox('AUTH/HELP')}
+					onPress={() => this.props.routeTo(this.props, 'AUTH/HELP')}
 					fullWidth={false}
 					type='secondary small'
 					text={this.props.i18n.t('auth.helpBtn')}

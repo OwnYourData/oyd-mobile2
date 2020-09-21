@@ -14,7 +14,7 @@ class Help extends React.PureComponent {
 				<UI.Spacer height={30} />
 				<UI.Block>
 					<UI.Button
-						onPress={() => this.props.dismissLightBox()}
+						onPress={() => this.props.popRoute(this.props)}
 						fullWidth={false}
 						type='primary pill'
 						text={this.props.i18n.t('auth.close')}

@@ -131,10 +131,10 @@ class ModuleLayout extends React.Component<Props> {
 	};
 
 	onPressBackBtn = () => {
-		const { showBack, componentId } = this.props;
+		const { showBack } = this.props;
 
 		if (showBack) {
-			Navigation.pop(componentId);
+			this.props.popRoute(this.props);
 		}
 	};
 
@@ -161,7 +161,8 @@ class ModuleLayout extends React.Component<Props> {
 			const {
 				status, message, error, type
 			} = this.props.core.errorMessage;
-			this.setState({ error: true }, this.props.showLightBox(
+			this.setState({ error: true }, this.props.routeTo(
+				this.props,
 				'CORE/ERROR',
 				{
 					error, status, message, type

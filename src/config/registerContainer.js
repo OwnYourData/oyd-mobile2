@@ -78,8 +78,7 @@ export default (store:mixed, sceneProps:SceneProps):Object<{}> => {
 	 */
 	const mapMobileRoutingProps = {
 		routeTo: nav.routeTo,
-		showLightBox: nav.showLightBox,
-		dismissLightBox: nav.dismissLightBox,
+		popRoute: nav.popRoute,
 		showModal: nav.showModal,
 		dismissModal: nav.dismissModal,
 		dismissAllModals: nav.dismissAllModals
