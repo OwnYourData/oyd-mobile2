@@ -131,8 +131,10 @@ class ModuleLayout extends React.Component<Props> {
 	};
 
 	onPressBackBtn = () => {
-		if (this.props.showBack) {
-			this.props.navigator.pop({ animated: true });
+		const { showBack, componentId } = this.props;
+
+		if (showBack) {
+			Navigation.pop(componentId);
 		}
 	};
 
