@@ -1,5 +1,6 @@
 import React from 'react';
-import { Alert, NetInfo } from 'react-native';
+import { Alert } from 'react-native';
+import NetInfo, { NetInfoStateType } from "@react-native-community/netinfo";
 import { replace } from 'lodash';
 
 import { getLocationData, setLocationData, setIdentifier } from '../../utils/asyncStore';
@@ -47,10 +48,8 @@ class Settings extends UI.PureComponent<Props> {
 
 	async componentWillMount() {
 		try {
-			this.handleConnectivityChange = this.handleConnectivityChange.bind(this);
 			NetInfo.addEventListener(
-				'connectionChange',
-				this.handleConnectivityChange,
+				() => this.handleConnectivityChange(),
 			);
 			await this.onParseStoredLocationData();
 		} catch (error) {
@@ -104,8 +103,8 @@ class Settings extends UI.PureComponent<Props> {
 	onParseStoredLocationData = async (isManual = false) => {
 		try {
 			if (this.props.isConnected && !this.state.isPosting) {
-				const { type } = await NetInfo.getConnectionInfo();
-				const isConnected = (type === 'wifi');
+				const { type } = await NetInfo.fetch();
+				const isConnected = (type === NetInfoStateType.wifi);
 				console.log('isManual', isManual);
 				if (isConnected || isManual) {
 					const { success, status } = await onRefreshToken();

@@ -34,7 +34,7 @@
 	},
 	"dependencies": {
 		"@react-native-community/async-storage": "^1.11.0",
-		"@react-native-community/netinfo": "^5.9.6",
+		"@react-native-community/netinfo": "^5.9.7",
 		"@storybook/addon-actions": "^3.3.6",
 		"@storybook/addon-links": "^3.3.6",
 		"@storybook/react-native": "^3.3.6",

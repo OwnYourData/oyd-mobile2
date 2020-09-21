@@ -1,4 +1,5 @@
-import { Platform, PermissionsAndroid, NetInfo } from 'react-native';
+import { Platform, PermissionsAndroid } from 'react-native';
+import NetInfo from "@react-native-community/netinfo";
 import RNAndroidLocationEnabler from 'react-native-android-location-enabler';
 import FusedLocation from 'react-native-fused-location';
 import { captureSentryMessage } from './captureSentryMessage';
@@ -48,7 +49,7 @@ export default class AppLocation {
 
 	async androidPermissions() {
 		try {
-			const { type } = await NetInfo.getConnectionInfo();
+			const { type } = await NetInfo.fetch();
 
 			const isConnected = (type !== 'none' && type !== 'unknown');
 			let granted = null;
