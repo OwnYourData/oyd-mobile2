@@ -8,8 +8,6 @@ class ReactPureComponent extends React.PureComponent {
 
 	renderInput = (label, value, field, secureTextEntry = false, error = false) =>
 		<TextField
-			labelTextStyle={{ fontFamily: 'Calibri', color: '#7F7F7F' }}
-			titleTextStyle={{ fontFamily: 'Arial' }}
 			textColor='#000000'
 			baseColor={error ? '#FF0000' : '#000000'}
 			fontSize={normalize(14)}
