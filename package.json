@@ -20,7 +20,6 @@
 		"start": "react-native start",
 		"start-clean": "react-native start --reset-cache",
 		"test": "jest",
-		"postinstall": "rndebugger-open",
 		"beta": "cd ios && fastlane beta test_email:dev@animal.at && cd ..",
 		"storybook": "storybook start -p 7007",
 		"run-job": "adb shell cmd jobscheduler run -f com.ownyourdata 999",
