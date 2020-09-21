@@ -21,13 +21,6 @@ class ReactPureComponent extends React.PureComponent {
 			onChangeText={text => this.props.onChangeLoginInput({ text, field })}
 		/>;
 
-	renderText = (text, type = 'p') =>
-		<UI.Text
-			type={type}
-			left
-			text={this.parseLocationInfo(this.props.i18n.t(text))}
-		/>;
-
 	renderButton = (text, onPress, type = 'primary', disabled = false) =>
 		<UI.Button
 			disabled={disabled}

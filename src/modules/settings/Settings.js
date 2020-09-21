@@ -89,7 +89,11 @@ class Settings extends UI.PureComponent<Props> {
 		try {
 			const { locationData } = await getLocationData();
 			this.props.onBackgroundDataEmpty({ backgroundDataEmpty: locationData.length === 0 });
-			this.setState({ localLocationData: locationData.length, showLocationData: this.props.lastUploadTime !== null });
+			this.setState({ 
+				localLocationData: locationData.length, 
+				showLocationData: this.props.lastUploadTime !== null,
+				locationCheck: false,
+			});
 		} catch (error) {
 			this.props.onError({
 				error: JSON.stringify(error),
@@ -120,6 +124,7 @@ class Settings extends UI.PureComponent<Props> {
 					this.props.onParseStoredLocationData();
 				}
 			}
+			// TODO: This implementation does not look good
 			await wait(2000);
 			await this.getLocalLocationData();
 		} catch (error) {
@@ -277,9 +282,17 @@ class Settings extends UI.PureComponent<Props> {
 				newText = replace(newText, '%date', '');
 			}
 		}
-		this.setState({ locationCheck: false });
 		return newText;
 	};
+
+	renderText = (text, type = 'p') =>
+		<UI.Text
+			type={type}
+			left
+			// TODO: WTF who did this?
+			// Why would you parseLocationInfo each time text is rendered?
+			text={this.parseLocationInfo(this.props.i18n.t(text))}
+		/>;
 
 	render = () => {
 		const disableUploadButton = (this.props.repoForLocationData === '' || (this.props.locationData.size === 0 && this.state.localLocationData === 0)) || !this.props.isConnected;
