@@ -19,6 +19,25 @@ target 'ownyourdata' do
   # needed by qr code scanner
   pod 'Permission-Camera', :path => "#{permissions_path}/Camera.podspec"
 
+  # IMPORTANT:
+  # This method is needed for a libsodium patch
+  # read more below
+  def change_lines_in_file(file_path, &change)
+    print "Fixing #{file_path}...\n"
+  
+    contents = []
+  
+    file = File.open(file_path, 'r')
+    file.each_line do | line |
+      contents << line
+    end
+    file.close
+  
+    File.open(file_path, 'w') do |f|
+      f.puts(change.call(contents))
+    end
+  end
+
   # Enables Flipper.
   #
   # Note that if you have use_frameworks! enabled, Flipper will not work and
@@ -26,5 +45,22 @@ target 'ownyourdata' do
   use_flipper!
   post_install do |installer|
     flipper_post_install(installer)
+
+    # This is a patch for libsodium
+    # libsodium includes its header files by specifying the filename alone
+    # This causes problems, as XCode tries to load header files from somewhere else
+    # Therefore, this patch explicitly specifies "libsodium" as the source for header files
+
+    # Many, many thanks to github user Jpunt, whom the idea is from patching this issue in the podfile
+    # This is the lovely podfile he created -> https://gist.github.com/Jpunt/3fe75effd54a702034b75ff697e47578
+    # Also here -> https://github.com/facebook/yoga/issues/711
+    Dir.glob('./Pods/libsodium/src/libsodium/**/*.c') do |filename|
+      change_lines_in_file(filename) do |lines|
+        lines.map { |line| 
+          line.include?('#include "utils.h"') ? '#include "libsodium/utils.h"' : line 
+          line.include?('#include "core.h"') ? '#include "libsodium/core.h"' : line 
+        }
+      end
+    end
   end
 end
