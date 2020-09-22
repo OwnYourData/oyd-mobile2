@@ -22,9 +22,7 @@ target 'ownyourdata' do
   # IMPORTANT:
   # This method is needed for a libsodium patch
   # read more below
-  def change_lines_in_file(file_path, &change)
-    print "Fixing #{file_path}...\n"
-  
+  def change_lines_in_file(file_path, &change)  
     contents = []
   
     file = File.open(file_path, 'r')
@@ -54,13 +52,17 @@ target 'ownyourdata' do
     # Many, many thanks to github user Jpunt, whom the idea is from patching this issue in the podfile
     # This is the lovely podfile he created -> https://gist.github.com/Jpunt/3fe75effd54a702034b75ff697e47578
     # Also here -> https://github.com/facebook/yoga/issues/711
-    Dir.glob('./Pods/libsodium/src/libsodium/**/*.c') do |filename|
+    libsodiumDir = './Pods/libsodium/**/*.c'
+
+    print "Patching libsodium in with glob '#{libsodiumDir}' ... "
+    Dir.glob(libsodiumDir) do |filename|
       change_lines_in_file(filename) do |lines|
         lines.map { |line| 
-          line.include?('#include "utils.h"') ? '#include "libsodium/utils.h"' : line 
-          line.include?('#include "core.h"') ? '#include "libsodium/core.h"' : line 
+          line.include?('#include "utils.h"') ? '#include "libsodium/utils.h"' : 
+          line.include?('#include "core.h"') ? '#include "libsodium/core.h"' : line
         }
       end
     end
+    print "successful\n"
   end
 end

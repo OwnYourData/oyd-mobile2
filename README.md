@@ -49,8 +49,10 @@ yarn run android # builds and installs the app on your connected phone/simulator
 
 ```shell
 yarn install
-yarn init-ios # installs pods and patches libsodium
+yarn run init-ios # installs pods and applies patches
 yarn run start # starts metro bundler for bundling js resources
 ```
 
 * Then switch to XCode, open the iOS project (iOS folder within the project) and hit the "run" button
+
+**Note regarding patches:** More information on the patches is provided in the file `scripts/init-ios.sh`
