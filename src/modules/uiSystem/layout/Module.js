@@ -2,7 +2,6 @@ import React from 'react';
 import {
 	Alert,
 	View,
-	AppState
 } from 'react-native';
 import RNRestart from 'react-native-restart';
 import { connect } from 'react-redux';
@@ -12,9 +11,6 @@ import Toast from 'react-native-easy-toast';
 import { Navigation } from 'react-native-navigation';
 
 import { Header, HeaderVert } from '../';
-import { isIos } from '../../../utils';
-// const OrientationNative = NativeModules.Orientation;
-// const LocalEventEmitter = new NativeEventEmitter(OrientationNative);
 
 const errorHandler = (e, isFatal) => {
 	if (isFatal) {
@@ -55,7 +51,7 @@ class ModuleLayout extends React.Component<Props> {
 		this.state = {
 			error: false,
 			showHeader: true,
-			showVertHeader: false
+			showVertHeader: false,
 		};
 		this.props = props;
 		this.toast = null;
@@ -68,8 +64,8 @@ class ModuleLayout extends React.Component<Props> {
 	}
 
 	componentDidMount() {
-		this.onCheckOrientation();
-		if (!isIos) AppState.addEventListener('change', this.onHandleAppStateChange);
+		Orientation.addOrientationListener(this.onOrientationChanged);
+		this.checkOrientation();
 	}
 
 	componentWillReceiveProps(nextProps) {
@@ -89,40 +85,16 @@ class ModuleLayout extends React.Component<Props> {
 	}
 
 	componentDidUpdate(nextProps) {
+		this.checkOrientation();
+
 		if (!('event' in this.props.core.get('scene'))) return;
-		const { key, } = this.props.core.get('scene');
-		if (key === 'DASHBOARD/APP_DETAIL' && isIos) {
-			this.onCheckOrientation();
-		}
+
 		this.checkErrors();
 		if (nextProps.showToastMessage) this.showToast();
 	}
 
 	componentWillUnmount() {
-		AppState.removeListener('change', this.onHandleAppStateChange);
-		Orientation.removeOrientationListener(this.orientationDidChange);
-		Orientation.lockToPortrait();
-	}
-
-	onHandleAppStateChange = (nextAppState) => {
-		console.log('nextAppState', nextAppState);
-		if (nextAppState === 'active') {
-			this.onCheckOrientation();
-		}
-		if (nextAppState === 'background') {
-			Orientation.removeOrientationListener(this.orientationDidChange);
-		}
-	};
-
-	onCheckOrientation() {
-		console.log('this.props.core.get(\'scene\').key ', this.props.core.get('scene').key);
-
-		if (this.props.core.get('scene').key === 'DASHBOARD' || this.props.core.get('scene').key === 'DASHBOARD/APP_DETAIL') {
-			Orientation.unlockAllOrientations();
-			Orientation.addOrientationListener(this.orientationDidChange);
-		} else {
-			Orientation.lockToPortrait();
-		}
+		Orientation.removeOrientationListener(this.onOrientationChanged);
 	}
 
 	onNavigatorEvent = (component) => {
@@ -138,19 +110,28 @@ class ModuleLayout extends React.Component<Props> {
 		}
 	};
 
+	onOrientationChanged = (orientation) => {
+		let showVertHeader = false;
 
-	orientationDidChange = (orientation) => {
-		console.log('this.props.core.get(\'scene\').key 2', this.props.core.get('scene').key);
-
-		if (this.props.core.get('scene').key === 'DASHBOARD' || this.props.core.get('scene').key === 'DASHBOARD/APP_DETAIL') {
-			if (orientation === 'LANDSCAPE') {
-				return this.setState({ showHeader: false, showVertHeader: true });
-			}
+		if (orientation === 'LANDSCAPE' && this.isSceneSupportingVertHeader()) {
+			showVertHeader = true;
 		}
 
-		this.setState({ showHeader: true, showVertHeader: false });
+		this.setState({
+			showHeader: !showVertHeader,
+			showVertHeader,
+		});
 	};
 
+	checkOrientation = () => {
+		Orientation.getOrientation((err, orientation) => this.onOrientationChanged(orientation));
+	}
+
+	isSceneSupportingVertHeader = () => {
+		const { key } = this.props.core.get('scene');
+
+		return key === 'DASHBOARD/APP_DETAIL';
+	}
 
 	showToast = () => this.toast.show(this.props.toastMessage, 1000);
 

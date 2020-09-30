@@ -1,5 +1,4 @@
 import React from 'react';
-import Orientation from 'react-native-orientation';
 
 import * as UI from '../uiSystem/';
 import { NoModules, ModuleList } from './components';
@@ -25,7 +24,6 @@ class Dashboard extends Location {
 
 	async componentDidMount() {
 		try {
-			Orientation.lockToPortrait();
 			backgroundTask.schedule();
 			// setTimeout(async () => getLocation(), 3000);
 			const { email, password, i18n } = this.props;
