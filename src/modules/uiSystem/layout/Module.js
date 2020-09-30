@@ -69,13 +69,13 @@ class ModuleLayout extends React.Component<Props> {
 	}
 
 	componentWillReceiveProps(nextProps) {
-	/*	if (nextProps.core.get('route').key === 'AUTH' && this.props.auth.get('credentials').value === null && nextProps.auth.get('credentials').value) {
-			console.log(this.props);
-			this.props.onEncryptCredentials({
-				nonce: nextProps.auth.get('credentials').nonce,
-				cipher: nextProps.auth.get('credentials').value,
-			});
-		} */
+		/*	if (nextProps.core.get('route').key === 'AUTH' && this.props.auth.get('credentials').value === null && nextProps.auth.get('credentials').value) {
+				console.log(this.props);
+				this.props.onEncryptCredentials({
+					nonce: nextProps.auth.get('credentials').nonce,
+					cipher: nextProps.auth.get('credentials').value,
+				});
+			} */
 
 		if (nextProps.core.get('route').key !== 'AUTH' &&
 			!nextProps.core.get('user').get('access_token')
@@ -152,25 +152,38 @@ class ModuleLayout extends React.Component<Props> {
 		}
 	};
 
+	getViewStyle = () => {
+		const style = {
+			flex: 1,
+			backgroundColor: '#fff',
+		};
+
+		if (this.state.showVertHeader) {
+			style.flexDirection = 'row';
+		}
+
+		return style;
+	}
+
 	render() {
 		return (
-			<View style={this.state.showHeader ? { flex: 1 } : { flex: 1, flexDirection: 'row' }}>
+			<View style={this.getViewStyle()}>
 				{this.state.showVertHeader &&
-				<HeaderVert
-					title={this.props.headerTitle}
-					showBack={this.props.showBack}
-					showIconButton={this.props.showIconButton}
-					onPress={this.onPressBackBtn}
-					onPressIconButton={this.props.onPressIconButton}
-				/>}
+					<HeaderVert
+						title={this.props.headerTitle}
+						showBack={this.props.showBack}
+						showIconButton={this.props.showIconButton}
+						onPress={this.onPressBackBtn}
+						onPressIconButton={this.props.onPressIconButton}
+					/>}
 				{this.state.showHeader && this.props.showHeader &&
-				<Header
-					title={this.props.headerTitle}
-					showBack={this.props.showBack}
-					showIconButton={this.props.showIconButton}
-					onPress={this.onPressBackBtn}
-					onPressIconButton={this.props.onPressIconButton}
-				/>}
+					<Header
+						title={this.props.headerTitle}
+						showBack={this.props.showBack}
+						showIconButton={this.props.showIconButton}
+						onPress={this.onPressBackBtn}
+						onPressIconButton={this.props.onPressIconButton}
+					/>}
 				<View style={{ flex: 1 }}>
 					{this.props.children}
 					<Toast
