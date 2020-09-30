@@ -1,6 +1,7 @@
 {
 	"name": "ownyourdata",
 	"version": "0.5.0",
+	"license": "MIT",
 	"scripts": {
 		"init-ios": "sh scripts/init-ios.sh",
 		"build-android": "cd android && ./gradlew assembleRelease && cd ..",
