@@ -61,10 +61,6 @@ allprojects {
                     details.useVersion "28.+"
                 }
                 if (details.requested.group == 'com.google.android.gms'
-                && !details.requested.name.contains('multidex') && !details.requested.name.contains('play-services-stats')) {
-                    details.useVersion "12.+"
-                }
-                if (details.requested.group == 'com.google.android.gms'
                 && !details.requested.name.contains('multidex') && details.requested.name.contains('play-services-stats')) {
                     details.useVersion "+"
                 }
