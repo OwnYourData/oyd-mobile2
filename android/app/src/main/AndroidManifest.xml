@@ -38,6 +38,9 @@
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="9d72c46c57203b924b373e07a1e5c147f801b3ed" />
+        <meta-data 
+            android:name="com.transistorsoft.locationmanager.license" 
+            android:value="1838e0ea1c9b7fe328364d27d6af6daf050d2c7676ed794a7624a78939f0a89e" />
         <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
     </application>
 
