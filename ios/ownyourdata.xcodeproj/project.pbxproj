@@ -35,6 +35,8 @@
 		840D953824F65EA600AA4110 /* libReact-RCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840D953724F65EA600AA4110 /* libReact-RCTVibration.a */; };
 		840D953B24F65FC900AA4110 /* ownyourdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D953A24F65FC900AA4110 /* ownyourdata.swift */; };
 		840FAC36253F268900D1CE06 /* appicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 840FAC35253F268700D1CE06 /* appicon.png */; };
+		84A36A042541876000D4FF53 /* RNLibSodium.m in Sources */ = {isa = PBXBuildFile; fileRef = 465980A02049904700E80407 /* RNLibSodium.m */; };
+		84A36A072541876C00D4FF53 /* liblibsodium.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A36A062541876C00D4FF53 /* liblibsodium.a */; };
 		A4226D7B144C46749BF03DFF /* Calibri Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C4C8F8D5E2F47D0A652FEBD /* Calibri Italic.ttf */; };
 		A4EDC31B3CFB4C77AA90F366 /* RNBackgroundFetch+AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 522E87BA73F04CC3AC793B23 /* RNBackgroundFetch+AppDelegate.m */; };
 		B342F2BF059D49D0953C034E /* Arial Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39B1C95EA87740E6AF07BDEF /* Arial Italic.ttf */; };
@@ -367,6 +369,7 @@
 		840D953924F65FC900AA4110 /* ownyourdata-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ownyourdata-Bridging-Header.h"; sourceTree = "<group>"; };
 		840D953A24F65FC900AA4110 /* ownyourdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ownyourdata.swift; sourceTree = "<group>"; };
 		840FAC35253F268700D1CE06 /* appicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appicon.png; path = ownyourdata/Images.xcassets/AppIcon.appiconset/appicon.png; sourceTree = "<group>"; };
+		84A36A062541876C00D4FF53 /* liblibsodium.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = liblibsodium.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		95FECC5307C94434A14FED59 /* libRNLocation.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNLocation.a; sourceTree = "<group>"; };
 		A168CE95D3D04BA2013B49F9 /* Pods-ownyourdata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ownyourdata.release.xcconfig"; path = "Target Support Files/Pods-ownyourdata/Pods-ownyourdata.release.xcconfig"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
@@ -382,6 +385,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A36A072541876C00D4FF53 /* liblibsodium.a in Frameworks */,
 				840D953824F65EA600AA4110 /* libReact-RCTVibration.a in Frameworks */,
 				840D953624F65EA000AA4110 /* libReact-RCTText.a in Frameworks */,
 				840D953424F65E9900AA4110 /* libReact-RCTSettings.a in Frameworks */,
@@ -529,6 +533,7 @@
 		4610C01E20408E0000DBB302 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84A36A062541876C00D4FF53 /* liblibsodium.a */,
 				840D953724F65EA600AA4110 /* libReact-RCTVibration.a */,
 				840D953524F65EA000AA4110 /* libReact-RCTText.a */,
 				840D953324F65E9900AA4110 /* libReact-RCTSettings.a */,
@@ -1190,7 +1195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				840D95DA24F6931500AA4110 /* RNLibSodium.m in Sources */,
+				84A36A042541876000D4FF53 /* RNLibSodium.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				468CA4F220A59654005125AF /* WifiCheck.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,

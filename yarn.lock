@@ -10717,10 +10717,10 @@ react-native-qrcode-scanner@^1.4.1:
     prop-types "^15.5.10"
     react-native-permissions "^2.0.2"
 
-react-native-restart@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/react-native-restart/-/react-native-restart-0.0.6.tgz#77770d078683947b2c1f2adb876f179269d8443a"
-  integrity sha512-ysKvNOjCeCS8A4ouQkJ8DZRYH4wgPdPEJqqqSGFuNzK4eAi3VPOeneQ3w0HHYeOui5fc6fV9y9ClOB9LcKbKpQ==
+react-native-restart@^0.0.17:
+  version "0.0.17"
+  resolved "https://registry.yarnpkg.com/react-native-restart/-/react-native-restart-0.0.17.tgz#c1f38e019d1a2114248d496698e7951e9435ba91"
+  integrity sha512-UwFPDssMFoyDbF2aLARIHWt5g/o0TtxCXK9WIY+0iNpkgG9qWd+n80XBwXioNCdgy39ZQ5yfJBJRwtMLDgABag==
 
 react-native-sentry@^0.43.2:
   version "0.43.2"

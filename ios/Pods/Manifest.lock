@@ -260,6 +260,8 @@ PODS:
     - React-Core
   - react-native-orientation (3.1.3):
     - React
+  - react-native-restart (0.0.17):
+    - React
   - react-native-spinkit (1.0.2):
     - React
   - react-native-webview (10.8.2):
@@ -407,6 +409,7 @@ DEPENDENCIES:
   - react-native-geocoder (from `../node_modules/react-native-geocoder`)
   - "react-native-netinfo (from `../node_modules/@react-native-community/netinfo`)"
   - react-native-orientation (from `../node_modules/react-native-orientation`)
+  - react-native-restart (from `../node_modules/react-native-restart`)
   - react-native-spinkit (from `../node_modules/react-native-spinkit`)
   - react-native-webview (from `../node_modules/react-native-webview`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
@@ -495,6 +498,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-community/netinfo"
   react-native-orientation:
     :path: "../node_modules/react-native-orientation"
+  react-native-restart:
+    :path: "../node_modules/react-native-restart"
   react-native-spinkit:
     :path: "../node_modules/react-native-spinkit"
   react-native-webview:
@@ -580,6 +585,7 @@ SPEC CHECKSUMS:
   react-native-geocoder: 757427682892bb256f3b3745858cc90eba148a8e
   react-native-netinfo: 250dc0ca126512f618a8a2ca6a936577e1f66586
   react-native-orientation: f1caf84d65f1a4fd4511a18f2b924e634ad7a628
+  react-native-restart: d19a0f8d053d065fe64cd2baebb6487111c77149
   react-native-spinkit: 9a5d2f95aa975d5660fd3e76b7eac38e7329e46c
   react-native-webview: 0e49a2e85f42b20ea5579928a8b254a07fa901dc
   React-RCTActionSheet: 910163b6b09685a35c4ebbc52b66d1bfbbe39fc5
