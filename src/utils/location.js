@@ -1,5 +1,5 @@
 import { Platform, PermissionsAndroid } from 'react-native';
-import NetInfo from "@react-native-community/netinfo";
+import NetInfo from '@react-native-community/netinfo';
 import RNAndroidLocationEnabler from 'react-native-android-location-enabler';
 import FusedLocation from 'react-native-fused-location';
 import { captureSentryMessage } from './captureSentryMessage';
@@ -59,22 +59,25 @@ export default class AppLocation {
 			const isConnected = (type !== 'none' && type !== 'unknown');
 			let granted = null;
 			if (!this.isBackground) {
-				granted = await PermissionsAndroid.request(
+				granted = await PermissionsAndroid.requestMultiple([
 					PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
 					PermissionsAndroid.PERMISSIONS.ACCESS_COARSE_LOCATION,
-					{
-						title: 'Location',
-						message: 'OwnYourData needs access to your location.'
-					}
-				);
+				]);
 			}
-			if (granted === PermissionsAndroid.RESULTS.GRANTED || granted === true || this.isBackground) {
-				// Doesn't work when in airplane mode.
-				if (!this.isBackground && isConnected) await RNAndroidLocationEnabler.promptForEnableLocationIfNeeded({ interval: 10000, fastInterval: 5000 });
-
-				FusedLocation.setLocationPriority(FusedLocation.Constants.HIGH_ACCURACY);
-				const position = await FusedLocation.getFusedLocation();
-				return { position, error: null };
+			if ((granted &&
+				granted['android.permission.ACCESS_COARSE_LOCATION'] === 'granted' &&
+				granted['android.permission.ACCESS_FINE_LOCATION'] === 'granted') ||
+				granted === true ||
+				this.isBackground) {
+				try {
+					// Doesn't work when in airplane mode.
+					if (!this.isBackground && isConnected) await RNAndroidLocationEnabler.promptForEnableLocationIfNeeded({ interval: 10000, fastInterval: 5000 });
+					FusedLocation.setLocationPriority(FusedLocation.Constants.HIGH_ACCURACY);
+					const position = await FusedLocation.getFusedLocation();
+					return { position, error: null };
+				} catch {
+					/* catch potential errors on smartphones without google play services */
+				}
 			}
 			return { position: null, error: true };
 		} catch (error) {
