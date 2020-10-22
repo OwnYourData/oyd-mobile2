@@ -3,6 +3,7 @@ import NetInfo from "@react-native-community/netinfo";
 import RNAndroidLocationEnabler from 'react-native-android-location-enabler';
 import FusedLocation from 'react-native-fused-location';
 import { captureSentryMessage } from './captureSentryMessage';
+import BackgroundGeolocation from 'react-native-background-geolocation';
 
 /**
  * Class to get location data
@@ -23,7 +24,7 @@ export default class AppLocation {
 		}
 	}
 
-	async init(isBackground:boolean = false) {
+	async init(isBackground: boolean = false) {
 		try {
 			this.isBackground = isBackground;
 			if (Platform.OS === 'android') return this.androidPermissions();
@@ -36,10 +37,14 @@ export default class AppLocation {
 
 	async watchLocation() {
 		try {
-			return new Promise((resolve) => {
-				this.watchID = navigator.geolocation.getCurrentPosition((position) => {
-					resolve({ position: position.coords, error: null });
-				}, error => (resolve({ position: null, error })));
+			return new Promise(async (resolve) => {
+				try {
+					const { coords } = await BackgroundGeolocation.getCurrentPosition();
+					resolve({ position: coords, error: null });
+				}
+				catch (error) {
+					resolve({ position: null, error });
+				}
 			});
 		} catch (error) {
 			await captureSentryMessage({ error: JSON.stringify(error), message: 'watchLocation method' });
