@@ -2,8 +2,8 @@ import { Platform, PermissionsAndroid } from 'react-native';
 import NetInfo from '@react-native-community/netinfo';
 import RNAndroidLocationEnabler from 'react-native-android-location-enabler';
 import FusedLocation from 'react-native-fused-location';
-import { captureSentryMessage } from './captureSentryMessage';
 import BackgroundGeolocation from 'react-native-background-geolocation';
+import { captureSentryMessage } from './captureSentryMessage';
 
 /**
  * Class to get location data
