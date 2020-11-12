@@ -30,6 +30,7 @@
 	"dependencies": {
 		"@react-native-community/async-storage": "^1.11.0",
 		"@react-native-community/netinfo": "^5.9.7",
+		"@sentry/react-native": "^2.0.0",
 		"@storybook/addon-actions": "^3.3.6",
 		"@storybook/addon-links": "^3.3.6",
 		"@storybook/react-native": "^3.3.6",
@@ -67,7 +68,6 @@
 		"react-native-permissions": "^2.2.0",
 		"react-native-qrcode-scanner": "^1.4.1",
 		"react-native-restart": "^0.0.17",
-		"react-native-sentry": "^0.43.2",
 		"react-native-sha256": "^1.1.1",
 		"react-native-spinkit": "^1.5.1",
 		"react-native-svg": "^9.9.4",

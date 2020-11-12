@@ -1,11 +1,11 @@
 import {
-	Sentry,
-	SentrySeverity
-} from 'react-native-sentry';
+	captureMessage,
+	Severity,
+} from '@sentry/react-native';
 /**
  * Send errors to Sentry
  */
-export const captureSentryMessage = args => Sentry.captureMessage('Act On Api Error', {
-	level: SentrySeverity.Info,
+export const captureSentryMessage = args => captureMessage('Act On Api Error', {
+	level: Severity.Info,
 	message: { ...args }
 });
