@@ -11,10 +11,30 @@ class ScanQR extends React.PureComponent {
 		try {
 			this.setModalVisible();
 
-			const obj = JSON.parse(e.data);
-			if (!has(obj, 'PIA_URL')) set(obj, 'PIA_URL', '');
-			if (!has(obj, 'email')) set(obj, 'email', '');
-			if (!has(obj, 'password')) set(obj, 'password', '');
+			let stringToParse = e.data;
+			// new versions (>= 2) do have the version flag
+			// and there is at least one field (password or password2) that contains the password as urlencoded string
+			const isNewVersion = /"version"/.test(stringToParse);
+
+			if (isNewVersion) {
+				// if password2 is there, we have to remove original password field as it is not urlencoded and could cause problems while parsing
+				stringToParse = stringToParse.replace(/"password"\s*:\s*".*"\s*,\s*"password2"/, '"password2"');
+			}
+
+			const obj = {
+				PIA_URL: '',
+				email: '',
+				password: '',
+				...JSON.parse(stringToParse),
+			};
+
+			if (obj.password2) {
+				// new version of password -> url encoded, so it does also support special characters
+				obj.password = obj.password2;
+				delete obj.password2;
+			}
+
+			if (isNewVersion) { obj.password = decodeURIComponent(obj.password); }
 
 			this.props.onParseQrCode({ obj });
 
