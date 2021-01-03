@@ -28,7 +28,7 @@ A few of the things you can do with the OwnYourData app:
 
 App was built with **react-native** under the hood.
 
-### Prerequisites
+### Prerequisites (both Android & iOS)
 
 * node.js (version >= 12)
 * yarn package manager
@@ -53,12 +53,28 @@ yarn build-android
 
 * XCode must be installed on your system
 
+#### Development Build
+
 ```shell
-yarn install
+yarn install # installs node dependencies
 yarn run init-ios # installs pods and applies patches
 yarn run start # starts metro bundler for bundling js resources
 ```
 
-* Then switch to XCode, open the iOS project (iOS folder within the project) and hit the "run" button
+* Open the iOS project (`ios` folder within the project)
+* Ensure that schema "ownyourdata-debug" is selected in XCode
+* Hit the button "run"
+
+#### Production Build
+
+```shell
+yarn install # installs node dependencies
+yarn run init-ios # installs pods and applies patches
+````
+* Open the iOS project (`ios` folder within the project)
+* Ensure that schema "ownyourdata-release" is selected in XCode
+* Then refer to this guide -> https://reactnative.dev/docs/publishing-to-app-store
+
+---
 
 **Note regarding patches:** More information on the patches is provided in the file `scripts/init-ios.sh`
