@@ -43,6 +43,12 @@ yarn run start # starts metro bundler for bundling js resources
 yarn run android # builds and installs the app on your connected phone/simulator
 ```
 
+Before building a production build, a development build has to be built.
+
+```shell
+yarn build-android
+```
+
 ### iOS
 
 * XCode must be installed on your system
