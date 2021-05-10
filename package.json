@@ -43,7 +43,7 @@
 		"esdoc-react-plugin": "^1.0.1",
 		"esdoc-standard-plugin": "^1.0.0",
 		"immutable": "^3.8.2",
-		"lodash": "^4.17.4",
+		"lodash": "^4.17.21",
 		"moment": "^2.20.1",
 		"react": "16.13.1",
 		"react-native": "0.63.3",
