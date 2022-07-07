@@ -44,7 +44,7 @@
 		"esdoc-standard-plugin": "^1.0.0",
 		"immutable": "^3.8.2",
 		"lodash": "^4.17.4",
-		"moment": "^2.20.1",
+		"moment": "^2.29.4",
 		"react": "16.13.1",
 		"react-native": "0.63.3",
 		"react-native-android-location-enabler": "^1.0.5",
